@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="text-center bg-gradient">
+        <h1>Vape Watchers</h1>
+        <p class="lead">
+            Our AI-powered monitoring system is designed to identify marketing strategies that target young audiences. By recognizing brands using young brand ambassadors, cartoon imagery, and vibrant, eye-catching colors, this system helps uncover tactics aimed at appealing to youth — promoting transparency and fostering ethical advertising practices.
+        </p>
+        <img src="static/BannerImage.png" alt="AI tech" class="img-fluid">
+    </div>
+{% endblock %}
+
+{% if message %}
+    <div class="alert alert-{{ message_class }}" role="alert">
+        {{ message }}
+    </div>
+{% endif %}
+

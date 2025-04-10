@@ -1,0 +1,24 @@
+body {
+    background-color: #f4f4f4;
+}
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+img {
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.light-blue-bg {
+    background-color: #d0e7ff; /* Soft light blue */
+    color: #0a2540; /* Darker text for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Add a hover effect */
+.light-blue-bg:hover {
+    background-color: #b8dfff; /* Slightly darker blue on hover */
+}
