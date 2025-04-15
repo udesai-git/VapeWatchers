@@ -11,9 +11,9 @@ import pandas as pd
 from io import BytesIO
 
 
-AWS_ACCESS_KEY="ASIARMWYWT5WXMIH756U"
-AWS_SECRET_KEY="HxmXPjM255nectVrgPIusFgiJgOHCYeC1YFnJrfP"
-aws_session_token="IQoJb3JpZ2luX2VjEPH//////////wEaCXVzLXdlc3QtMiJHMEUCIF0oIvMP4z8Tk7CVEEZ95fJVHpo3Ph5xWtERLDDBN13MAiEAy29ggiROBkDp7gs6VAz3HiTcqT3Uq6cHvLGgp+nw/E4qqgIIahABGgwwOTYwMTc0ODk3NzMiDBL4sfBBqi9YNSyHVSqHAg+d/H2bLQJd6XfuIC59iSDbcQIAViVnG8c5PgNqy2iXY/KF2ec8UoJMcb3FIxMVrKWZV1hhf3Cekn5d2lA/simQkRYoBvkQokhILQRSPWVJ7xkUJGsISqusTrd63cwcRVLocpt2dHL7sEYvQ3vFtfsWlqehyI6InimfQ0sSGHStqczJeaU3ZHLcG1uOa70xdLZavWYiHbOCK9KqqA/fRczBPc6ktGIng9j4cckGxfmwLG1baiC5FIJiVpGbGOMVFa5IrCOEZsEXvNcE56OPAlTgR3x5SCJGwknVwErkQSnHPd7yFybBMXAmQMD1dA34ZSTNpIyWG9ZIUpN+qh4C9drRV4OIf5CBMLja0b8GOp0B8qr4Gn9wNJQiBqA1OWjxq2Hz77yit0M5yBkI2HKmM72/JpnIlJR+i9QQ31F13jNxMiAL0AXCBuoTyj8QiC+JEa/1/ucaQTiIcFNsn2npOJQ1q/G5yHMQMAau2oeEzs1CA3/s1J4XzY6r9CgRZBV8X103yvY0vh7SIj1GE7ku57zYsByVBTFGD/qvm+gj8W5ZKEHJSsV0dqoiDds7AA=="
+AWS_ACCESS_KEY="ASIARMWYWT5W52CZXXBI"
+AWS_SECRET_KEY="c9orzaCeF8NsHy+pITmG3gYk3knbRELOTTtT7+4X"
+aws_session_token="IQoJb3JpZ2luX2VjEKX//////////wEaCXVzLXdlc3QtMiJHMEUCIQCj0tLOhKjnDfCY5Ml6tLpDdDf1Es92KFu/toW1dJ1VnQIgY/tru9CTU9edVaqZzUOR9s5o3piJ3MlZCwekL8MvqX4qqgIILhABGgwwOTYwMTc0ODk3NzMiDB+v1RCHfTDeHYzJOyqHAqVuxYR4tNpwlKeEOT8aKNGQCGqPudL0QLfJtYrZftffi7EtYGVhtU2UCUaK1niZFY+ckpkCDVZsXyPtLxGdVZofkbyV12rEHwF/rCRmh8IKGCxS+PNnwj4bPeJbIsHrrSVyYKRV3NhoqDDESLMOdczgA3TcknuAmgxR6tUBt7e/4hEXPl5LatB844kd8g7i9fmMS4gwOE+6J918OhiWvuhzL7IlfQ3vRgcEGCoQL46PkuqGjfM0zI0EPVMtWDB1bD377L4kSoQ5KjrjREF5ZAaQD+Uq2pw3/lb3F5ZnPmYVELqnUd1h1Ytki4JXgodah7mprUFezUi/gte3klabqRcz1xdg6E9oMJ+l+b8GOp0Bugt5jI36GV6EC/zRUR1qOXK/a4dZns++0e81jPhn9kCY6Hk2flAlpdZDyKtQBrWX7Uzc8f0z96PtJF8BoEJjESlM48POZHofuAY+ap5ib4XnqN2dDO3IrTLjNQWLyr0+WLVA9oc6UNA9zRARKTfqQNpefdyx5+G99levH8OFp/GinVwV/HR7A+SWiVS2B+UGkUvbXhT5cFUu4LP0rw=="
 
 
 s3_session = boto3.Session(
@@ -65,11 +65,11 @@ plt.savefig(image_path)
 plt.close()
 
 plt.figure(figsize=(8, 5))
-sns.countplot(data=df, x='Dominant_VIBGYOR', order=df['Dominant_VIBGYOR'].value_counts().index)
+sns.countplot(data=df, x='Dominant_COLOR', order=df['Dominant_COLOR'].value_counts().index)
 plt.title('Dominant VIBGYOR Color Distribution')
 plt.xlabel('Dominant Color')
 plt.ylabel('Count')
-image_path = os.path.join(visualization_folder, "Dominant_VIBGYOR_Color_Distribution.png")
+image_path = os.path.join(visualization_folder, "Dominant_COLOR_Color_Distribution.png")
 plt.savefig(image_path)
 plt.close()
 
@@ -122,7 +122,7 @@ image_path = os.path.join(visualization_folder, "VapeType_vs_BrightnessLevel.png
 plt.savefig(image_path)
 plt.close()
 
-cartoon_color_ct = pd.crosstab(df['Dominant_VIBGYOR'], df['Cartoon'])
+cartoon_color_ct = pd.crosstab(df['Dominant_COLOR'], df['Cartoon'])
 cartoon_color_ct.plot(kind='bar', stacked=True, figsize=(10, 6))
 plt.title('Stacked Bar Chart: Cartoon Presence by Dominant Color')
 plt.xlabel('Dominant VIBGYOR Color')

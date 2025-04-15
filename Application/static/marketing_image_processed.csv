@@ -1,4 +1,4 @@
-Company,Face,Age,Cartoon,Vape_Type,Brightness_Level,Dominant_VIBGYOR,Label
+Company,Face,Age,Cartoon,Vape_Type,Brightness_Level,Dominant_COLOR,Label
 INNOKIN,No,N/A,Yes,electronic-cigarette,3,Indigo,0
 INNOKIN,Yes,(25-32),Yes,electronic-cigarette,6,Indigo,1
 INNOKIN,No,N/A,Yes,None,5,Violet,0
