@@ -9,7 +9,7 @@ def label_data(row):
     elif row['Brightness_Level'] > 5:
         return 1
     
-    elif row['Dominant_VIBGYOR'] in ['Red', 'Orange', 'Yellow']:
+    elif row['Dominant_COLOR'] in ['Red', 'Orange', 'Yellow']:
         return 1
     return 0
 

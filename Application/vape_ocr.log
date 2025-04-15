@@ -1,0 +1,1780 @@
+2025-04-12 21:26:29,243 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 21:26:29,243 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 21:26:29,272 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-12 21:26:35,352 - WARNING -  * Debugger is active!
+2025-04-12 21:26:35,373 - INFO -  * Debugger PIN: 316-045-193
+2025-04-12 21:26:40,729 - INFO - 127.0.0.1 - - [12/Apr/2025 21:26:40] "GET / HTTP/1.1" 200 -
+2025-04-12 21:26:43,555 - INFO - 127.0.0.1 - - [12/Apr/2025 21:26:43] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-12 21:26:44,373 - INFO - 127.0.0.1 - - [12/Apr/2025 21:26:44] "GET /static/BannerImage.png HTTP/1.1" 200 -
+2025-04-12 21:27:57,612 - INFO - 127.0.0.1 - - [12/Apr/2025 21:27:57] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-12 21:28:01,582 - INFO - 127.0.0.1 - - [12/Apr/2025 21:28:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-12 21:28:01,582 - INFO - 127.0.0.1 - - [12/Apr/2025 21:28:01] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-12 21:32:20,280 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-12 21:32:23,886 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-12 21:32:30,128 - WARNING -  * Debugger is active!
+2025-04-12 21:32:30,146 - INFO -  * Debugger PIN: 316-045-193
+2025-04-12 21:32:44,922 - INFO - 127.0.0.1 - - [12/Apr/2025 21:32:44] "GET / HTTP/1.1" 200 -
+2025-04-12 21:32:48,317 - INFO - 127.0.0.1 - - [12/Apr/2025 21:32:48] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-12 21:32:48,317 - INFO - 127.0.0.1 - - [12/Apr/2025 21:32:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-12 21:34:22,043 - INFO - 127.0.0.1 - - [12/Apr/2025 21:34:22] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-12 21:34:25,979 - INFO - 127.0.0.1 - - [12/Apr/2025 21:34:25] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-12 21:34:25,979 - INFO - 127.0.0.1 - - [12/Apr/2025 21:34:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-12 22:03:23,601 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 22:03:23,601 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 22:03:23,608 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-12 22:03:28,493 - WARNING -  * Debugger is active!
+2025-04-12 22:03:28,517 - INFO -  * Debugger PIN: 316-045-193
+2025-04-12 22:03:42,811 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:42] "GET / HTTP/1.1" 200 -
+2025-04-12 22:03:45,985 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:45] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-12 22:03:45,985 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:45] "GET /static/BannerImage.png HTTP/1.1" 200 -
+2025-04-12 22:03:52,300 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:52] "GET /dashboard HTTP/1.1" 200 -
+2025-04-12 22:03:56,151 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:56] "GET /visualization_images/BrightnessLevelDistribution.png HTTP/1.1" 200 -
+2025-04-12 22:03:56,204 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:56] "GET /visualization_images/Presence_of_Cartoon_Elements_in_Images.png HTTP/1.1" 200 -
+2025-04-12 22:03:56,261 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-12 22:03:56,263 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:56] "GET /visualization_images/VapeType_vs_BrightnessLevel.png HTTP/1.1" 200 -
+2025-04-12 22:03:56,265 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:56] "GET /visualization_images/Dominant_COLOR_Color_Distribution.png HTTP/1.1" 200 -
+2025-04-12 22:03:56,266 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:56] "GET /visualization_images/Age_Distribution_in_Images.png HTTP/1.1" 200 -
+2025-04-12 22:03:59,543 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:59] "GET /visualization_images/Vape_Type_Distribution.png HTTP/1.1" 200 -
+2025-04-12 22:03:59,565 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:59] "GET /visualization_images/Distribution_of_Brightness_Levels.png HTTP/1.1" 200 -
+2025-04-12 22:03:59,565 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:59] "GET /visualization_images/Presence_of_Human_Faces_in_Images.png HTTP/1.1" 200 -
+2025-04-12 22:03:59,566 - INFO - 127.0.0.1 - - [12/Apr/2025 22:03:59] "GET /visualization_images/Stacked%20Bar%20Chart.png HTTP/1.1" 200 -
+2025-04-12 22:05:12,645 - INFO - 127.0.0.1 - - [12/Apr/2025 22:05:12] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-12 22:05:16,010 - INFO - 127.0.0.1 - - [12/Apr/2025 22:05:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-12 22:05:16,010 - INFO - 127.0.0.1 - - [12/Apr/2025 22:05:16] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-12 22:10:10,297 - INFO - 127.0.0.1 - - [12/Apr/2025 22:10:10] "GET / HTTP/1.1" 200 -
+2025-04-12 22:10:13,077 - INFO - 127.0.0.1 - - [12/Apr/2025 22:10:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-12 22:10:13,729 - INFO - 127.0.0.1 - - [12/Apr/2025 22:10:13] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-12 22:10:25,812 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-12 22:10:29,016 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-12 22:10:34,917 - WARNING -  * Debugger is active!
+2025-04-12 22:10:34,960 - INFO -  * Debugger PIN: 316-045-193
+2025-04-12 22:10:38,292 - INFO - 127.0.0.1 - - [12/Apr/2025 22:10:38] "GET / HTTP/1.1" 200 -
+2025-04-12 22:10:41,719 - INFO - 127.0.0.1 - - [12/Apr/2025 22:10:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-12 22:10:41,829 - INFO - 127.0.0.1 - - [12/Apr/2025 22:10:41] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-12 22:11:57,771 - INFO - 127.0.0.1 - - [12/Apr/2025 22:11:57] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-12 22:12:01,807 - INFO - 127.0.0.1 - - [12/Apr/2025 22:12:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-12 22:12:01,807 - INFO - 127.0.0.1 - - [12/Apr/2025 22:12:01] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-12 22:14:38,830 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-12 22:14:41,734 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-12 22:14:48,430 - WARNING -  * Debugger is active!
+2025-04-12 22:14:48,694 - INFO -  * Debugger PIN: 316-045-193
+2025-04-12 22:15:42,431 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-12 22:15:44,419 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-12 22:15:50,574 - WARNING -  * Debugger is active!
+2025-04-12 22:15:50,593 - INFO -  * Debugger PIN: 316-045-193
+2025-04-12 22:18:00,455 - INFO - 127.0.0.1 - - [12/Apr/2025 22:18:00] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-12 22:18:05,028 - INFO - 127.0.0.1 - - [12/Apr/2025 22:18:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-12 22:18:05,028 - INFO - 127.0.0.1 - - [12/Apr/2025 22:18:05] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-12 22:22:05,833 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-12 22:22:09,345 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-12 22:22:15,655 - WARNING -  * Debugger is active!
+2025-04-12 22:22:15,677 - INFO -  * Debugger PIN: 316-045-193
+2025-04-12 22:29:22,436 - INFO - 127.0.0.1 - - [12/Apr/2025 22:29:22] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-12 22:29:29,251 - INFO - 127.0.0.1 - - [12/Apr/2025 22:29:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-12 22:29:29,252 - INFO - 127.0.0.1 - - [12/Apr/2025 22:29:29] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 01:13:45,978 - INFO - 127.0.0.1 - - [13/Apr/2025 01:13:45] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 01:13:49,654 - INFO - 127.0.0.1 - - [13/Apr/2025 01:13:49] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 01:13:49,659 - INFO - 127.0.0.1 - - [13/Apr/2025 01:13:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 16:46:09,433 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 16:46:09,434 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 16:46:09,462 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 16:46:14,387 - WARNING -  * Debugger is active!
+2025-04-13 16:46:14,406 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 16:46:27,953 - INFO - 127.0.0.1 - - [13/Apr/2025 16:46:27] "GET / HTTP/1.1" 200 -
+2025-04-13 16:46:31,096 - INFO - 127.0.0.1 - - [13/Apr/2025 16:46:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 16:46:31,096 - INFO - 127.0.0.1 - - [13/Apr/2025 16:46:31] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 16:48:41,376 - INFO - 127.0.0.1 - - [13/Apr/2025 16:48:41] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 16:48:45,168 - INFO - 127.0.0.1 - - [13/Apr/2025 16:48:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 16:48:45,168 - INFO - 127.0.0.1 - - [13/Apr/2025 16:48:45] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 16:51:29,459 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 16:51:31,997 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 16:51:38,068 - WARNING -  * Debugger is active!
+2025-04-13 16:51:38,089 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 16:52:37,086 - INFO - 127.0.0.1 - - [13/Apr/2025 16:52:37] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 16:52:39,998 - INFO - 127.0.0.1 - - [13/Apr/2025 16:52:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 16:52:39,998 - INFO - 127.0.0.1 - - [13/Apr/2025 16:52:39] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 16:54:09,712 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-13 16:54:11,910 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 16:54:18,066 - WARNING -  * Debugger is active!
+2025-04-13 16:54:18,085 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 16:56:14,969 - INFO - 127.0.0.1 - - [13/Apr/2025 16:56:14] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 16:56:17,574 - INFO - 127.0.0.1 - - [13/Apr/2025 16:56:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 16:56:18,409 - INFO - 127.0.0.1 - - [13/Apr/2025 16:56:18] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 16:59:21,093 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 16:59:23,695 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 16:59:30,758 - WARNING -  * Debugger is active!
+2025-04-13 16:59:30,784 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 17:00:01,318 - INFO - 127.0.0.1 - - [13/Apr/2025 17:00:01] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 17:00:04,444 - INFO - 127.0.0.1 - - [13/Apr/2025 17:00:04] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 17:00:04,444 - INFO - 127.0.0.1 - - [13/Apr/2025 17:00:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 17:01:27,779 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 17:01:29,980 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 17:01:35,832 - WARNING -  * Debugger is active!
+2025-04-13 17:01:35,849 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 17:04:10,661 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 17:04:12,756 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 17:18:27,614 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 17:18:27,615 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 17:18:27,621 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 17:18:33,760 - WARNING -  * Debugger is active!
+2025-04-13 17:18:33,787 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 17:19:05,868 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 17:19:05,868 - INFO - OCR initialized with GPU support.
+2025-04-13 17:19:05,869 - INFO - Checking GPU status...
+2025-04-13 17:19:05,869 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 17:19:05,874 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:05] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 17:19:09,451 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 17:19:09,452 - INFO - 127.0.0.1 - - [13/Apr/2025 17:19:09] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 17:25:32,566 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 17:25:32,567 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 17:25:32,585 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 17:25:37,217 - WARNING -  * Debugger is active!
+2025-04-13 17:25:37,247 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 17:25:56,028 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 17:25:56,029 - INFO - OCR initialized with GPU support.
+2025-04-13 17:25:56,030 - INFO - Checking GPU status...
+2025-04-13 17:25:56,030 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 17:25:56,035 - INFO - 127.0.0.1 - - [13/Apr/2025 17:25:56] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 17:25:59,119 - INFO - 127.0.0.1 - - [13/Apr/2025 17:25:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 17:25:59,120 - INFO - 127.0.0.1 - - [13/Apr/2025 17:25:59] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 17:28:04,022 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 17:28:06,302 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 17:28:12,348 - WARNING -  * Debugger is active!
+2025-04-13 17:28:12,374 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 17:28:53,302 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 17:28:53,303 - INFO - OCR initialized with GPU support.
+2025-04-13 17:28:53,303 - INFO - Checking GPU status...
+2025-04-13 17:28:53,303 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 17:28:53,303 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 17:28:53,303 - INFO - Initializing EasyOCR reader...
+2025-04-13 17:28:53,304 - ERROR - Error initializing EasyOCR: name 'easyocr' is not defined
+2025-04-13 17:28:53,308 - INFO - 127.0.0.1 - - [13/Apr/2025 17:28:53] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 17:28:56,621 - INFO - 127.0.0.1 - - [13/Apr/2025 17:28:56] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 17:28:56,621 - INFO - 127.0.0.1 - - [13/Apr/2025 17:28:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 17:30:54,700 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 17:30:56,910 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 17:31:04,151 - WARNING -  * Debugger is active!
+2025-04-13 17:31:04,203 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 17:31:27,431 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 17:31:27,432 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 17:31:27,438 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 17:31:33,836 - WARNING -  * Debugger is active!
+2025-04-13 17:31:33,853 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 17:31:48,365 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 17:31:48,366 - INFO - OCR initialized with GPU support.
+2025-04-13 17:31:48,366 - INFO - Checking GPU status...
+2025-04-13 17:31:48,366 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 17:31:48,366 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 17:31:48,367 - INFO - Initializing EasyOCR reader...
+2025-04-13 17:31:48,367 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 17:31:48,370 - WARNING - Downloading detection model, please wait. This may take several minutes depending upon your network connection.
+2025-04-13 17:31:51,059 - INFO - Download complete
+2025-04-13 17:31:51,059 - WARNING - Downloading recognition model, please wait. This may take several minutes depending upon your network connection.
+2025-04-13 17:31:51,746 - INFO - Download complete.
+2025-04-13 17:31:53,622 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 17:31:55,720 - ERROR - Error checking S3 path: Unable to locate credentials
+2025-04-13 17:31:55,721 - ERROR - ERROR: S3 path s3://vapewatchers-2025/MarketingImagesCopy/ does not exist.
+2025-04-13 17:31:55,727 - INFO - 127.0.0.1 - - [13/Apr/2025 17:31:55] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 17:31:58,774 - INFO - 127.0.0.1 - - [13/Apr/2025 17:31:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 17:31:58,774 - INFO - 127.0.0.1 - - [13/Apr/2025 17:31:58] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 17:38:02,956 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 17:38:06,126 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 17:38:13,113 - WARNING -  * Debugger is active!
+2025-04-13 17:38:13,162 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 17:38:38,377 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 17:38:38,378 - INFO - OCR initialized with GPU support.
+2025-04-13 17:38:38,379 - INFO - Checking GPU status...
+2025-04-13 17:38:38,379 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 17:38:38,379 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 17:38:38,379 - INFO - Initializing EasyOCR reader...
+2025-04-13 17:38:38,379 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 17:38:40,399 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 17:38:40,467 - INFO - CUDA acceleration: Disabled
+2025-04-13 17:38:40,467 - INFO - Using 2 threads for parallel processing
+2025-04-13 17:38:40,474 - INFO - 127.0.0.1 - - [13/Apr/2025 17:38:40] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 17:38:43,789 - INFO - 127.0.0.1 - - [13/Apr/2025 17:38:43] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 17:38:43,789 - INFO - 127.0.0.1 - - [13/Apr/2025 17:38:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 17:40:39,752 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 17:40:42,129 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 17:40:48,803 - WARNING -  * Debugger is active!
+2025-04-13 17:40:48,900 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 17:41:03,316 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 17:41:03,317 - INFO - OCR initialized with GPU support.
+2025-04-13 17:41:03,318 - INFO - Checking GPU status...
+2025-04-13 17:41:03,318 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 17:41:03,318 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 17:41:03,318 - INFO - Initializing EasyOCR reader...
+2025-04-13 17:41:03,318 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 17:41:05,335 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 17:41:05,389 - INFO - CUDA acceleration: Disabled
+2025-04-13 17:41:05,389 - INFO - Using 2 threads for parallel processing
+2025-04-13 17:41:05,412 - INFO - Found 1 brand folders in S3.
+2025-04-13 17:41:05,418 - INFO - 127.0.0.1 - - [13/Apr/2025 17:41:05] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 17:41:08,353 - INFO - 127.0.0.1 - - [13/Apr/2025 17:41:08] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 17:41:08,354 - INFO - 127.0.0.1 - - [13/Apr/2025 17:41:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 17:46:53,157 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 17:46:55,481 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 17:47:02,149 - WARNING -  * Debugger is active!
+2025-04-13 17:47:02,188 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 17:47:41,135 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 17:47:41,136 - INFO - OCR initialized with GPU support.
+2025-04-13 17:47:41,137 - INFO - Checking GPU status...
+2025-04-13 17:47:41,137 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 17:47:41,137 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 17:47:41,137 - INFO - Initializing EasyOCR reader...
+2025-04-13 17:47:41,137 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 17:47:43,418 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 17:47:43,498 - INFO - CUDA acceleration: Disabled
+2025-04-13 17:47:43,498 - INFO - Using 2 threads for parallel processing
+2025-04-13 17:47:43,520 - INFO - Found 1 brand folders in S3.
+2025-04-13 17:47:43,528 - INFO - 127.0.0.1 - - [13/Apr/2025 17:47:43] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 17:47:47,153 - INFO - 127.0.0.1 - - [13/Apr/2025 17:47:47] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 17:47:47,153 - INFO - 127.0.0.1 - - [13/Apr/2025 17:47:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 17:50:22,868 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 17:50:25,160 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 20:27:27,221 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 20:27:27,222 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 20:27:27,259 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 20:27:32,379 - WARNING -  * Debugger is active!
+2025-04-13 20:27:32,431 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 20:27:52,083 - INFO - 127.0.0.1 - - [13/Apr/2025 20:27:52] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 20:27:53,939 - INFO - 127.0.0.1 - - [13/Apr/2025 20:27:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 20:27:53,939 - INFO - 127.0.0.1 - - [13/Apr/2025 20:27:53] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 20:41:14,992 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/app.py', reloading
+2025-04-13 20:41:14,995 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-13 20:41:14,995 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-13 20:41:14,995 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-13 20:41:14,995 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-13 20:41:14,996 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/app.py', reloading
+2025-04-13 20:41:18,126 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 20:41:24,927 - WARNING -  * Debugger is active!
+2025-04-13 20:41:24,951 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 20:41:40,982 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-13 20:41:40,984 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/app.py', reloading
+2025-04-13 20:41:40,985 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-13 20:41:40,985 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-13 20:41:43,055 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 20:41:49,321 - WARNING -  * Debugger is active!
+2025-04-13 20:41:49,346 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 20:42:07,651 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-13 20:42:07,651 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/app.py', reloading
+2025-04-13 20:42:07,651 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-13 20:42:09,588 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 20:42:16,483 - WARNING -  * Debugger is active!
+2025-04-13 20:42:16,501 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 20:42:16,932 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 20:42:19,180 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 20:42:25,324 - WARNING -  * Debugger is active!
+2025-04-13 20:42:25,369 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 20:43:41,164 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 20:43:41,166 - INFO - OCR initialized with GPU support.
+2025-04-13 20:43:41,171 - INFO - Checking GPU status...
+2025-04-13 20:43:41,171 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 20:43:41,171 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 20:43:41,171 - INFO - Initializing EasyOCR reader...
+2025-04-13 20:43:41,171 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 20:43:43,214 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 20:43:43,295 - INFO - CUDA acceleration: Disabled
+2025-04-13 20:43:43,295 - INFO - Using 2 threads for parallel processing
+2025-04-13 20:43:43,315 - INFO - Found 1 brand folders in S3.
+2025-04-13 20:43:43,315 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 20:43:43,315 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 20:43:43,432 - INFO - Found 0 images in UWELL folder
+2025-04-13 20:43:43,432 - INFO - Using 1 threads and batch size of 0
+2025-04-13 20:43:43,440 - INFO - 127.0.0.1 - - [13/Apr/2025 20:43:43] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 20:43:46,768 - INFO - 127.0.0.1 - - [13/Apr/2025 20:43:46] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 20:43:46,768 - INFO - 127.0.0.1 - - [13/Apr/2025 20:43:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 21:00:51,036 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:00:54,469 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:01:01,354 - WARNING -  * Debugger is active!
+2025-04-13 21:01:01,407 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:01:26,946 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:01:28,999 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:01:35,124 - WARNING -  * Debugger is active!
+2025-04-13 21:01:35,144 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:01:53,555 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:01:55,600 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:02:02,087 - WARNING -  * Debugger is active!
+2025-04-13 21:02:02,111 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:02:38,579 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:02:40,733 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:02:47,303 - WARNING -  * Debugger is active!
+2025-04-13 21:02:47,324 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:04:07,880 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 21:04:07,882 - INFO - OCR initialized with GPU support.
+2025-04-13 21:04:07,883 - INFO - Checking GPU status...
+2025-04-13 21:04:07,883 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 21:04:07,883 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 21:04:07,883 - INFO - Initializing EasyOCR reader...
+2025-04-13 21:04:07,883 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 21:04:09,906 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 21:04:10,048 - INFO - CUDA acceleration: Disabled
+2025-04-13 21:04:10,048 - INFO - Using 2 threads for parallel processing
+2025-04-13 21:04:10,074 - INFO - Found 1 brand folders in S3.
+2025-04-13 21:04:10,074 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 21:04:10,074 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 21:04:10,245 - INFO - Found 5 images in UWELL folder
+2025-04-13 21:04:10,245 - INFO - Using 1 threads and batch size of 5
+2025-04-13 21:04:10,245 - INFO - Processing batch 1/1
+2025-04-13 21:04:10,266 - ERROR - Error processing MarketingImagesCopy/UWELL/Screenshot 2025-03-04 at 5.20.52 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:04:10,266 - ERROR - Error processing MarketingImagesCopy/UWELL/Screenshot 2025-03-04 at 5.23.09 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:04:10,266 - ERROR - Error processing MarketingImagesCopy/UWELL/Screenshot 2025-03-04 at 5.23.25 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:04:10,266 - ERROR - Error processing MarketingImagesCopy/UWELL/Screenshot 2025-03-04 at 5.23.57 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:04:10,266 - ERROR - Error processing MarketingImagesCopy/UWELL/Screenshot 2025-03-04 at 5.24.50 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:04:10,473 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 21:04:10,475 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-13 21:04:10,475 - INFO - 
+Best method statistics:
+2025-04-13 21:04:10,475 - INFO - 
+Processed 5 images in 0.40 seconds
+2025-04-13 21:04:10,475 - INFO - Average time per image: 0.08 seconds
+2025-04-13 21:04:10,476 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 21:04:12,577 - INFO - 127.0.0.1 - - [13/Apr/2025 21:04:12] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 21:04:16,262 - INFO - 127.0.0.1 - - [13/Apr/2025 21:04:16] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 21:04:16,263 - INFO - 127.0.0.1 - - [13/Apr/2025 21:04:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 21:12:41,342 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:12:44,937 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:12:51,706 - WARNING -  * Debugger is active!
+2025-04-13 21:12:51,727 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:13:12,081 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 21:13:12,082 - INFO - OCR initialized with GPU support.
+2025-04-13 21:13:12,087 - INFO - Checking GPU status...
+2025-04-13 21:13:12,087 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 21:13:12,087 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 21:13:12,087 - INFO - Initializing EasyOCR reader...
+2025-04-13 21:13:12,088 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 21:13:14,139 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 21:13:14,226 - INFO - CUDA acceleration: Disabled
+2025-04-13 21:13:14,226 - INFO - Using 2 threads for parallel processing
+2025-04-13 21:13:14,248 - INFO - Found 1 brand folders in S3.
+2025-04-13 21:13:14,248 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 21:13:14,248 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 21:13:14,407 - INFO - Found 5 images in UWELL folder
+2025-04-13 21:13:14,407 - INFO - Using 1 threads and batch size of 5
+2025-04-13 21:13:14,407 - INFO - Processing batch 1/1
+2025-04-13 21:13:14,420 - ERROR - Error processing MarketingImagesCopy/UWELL/Screenshot 2025-03-04 at 5.20.52 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:13:14,420 - ERROR - Error processing MarketingImagesCopy/UWELL/Screenshot 2025-03-04 at 5.23.09 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:13:14,421 - ERROR - Error processing MarketingImagesCopy/UWELL/Screenshot 2025-03-04 at 5.23.25 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:13:14,421 - ERROR - Error processing MarketingImagesCopy/UWELL/Screenshot 2025-03-04 at 5.23.57 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:13:14,421 - ERROR - Error processing MarketingImagesCopy/UWELL/Screenshot 2025-03-04 at 5.24.50 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:13:14,594 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 21:13:14,596 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-13 21:13:14,596 - INFO - 
+Best method statistics:
+2025-04-13 21:13:14,596 - INFO - 
+Processed 5 images in 0.35 seconds
+2025-04-13 21:13:14,596 - INFO - Average time per image: 0.07 seconds
+2025-04-13 21:13:14,597 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 21:13:16,677 - INFO - 127.0.0.1 - - [13/Apr/2025 21:13:16] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 21:13:19,510 - INFO - 127.0.0.1 - - [13/Apr/2025 21:13:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 21:13:20,437 - INFO - 127.0.0.1 - - [13/Apr/2025 21:13:20] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 21:15:34,764 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:15:34,768 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:15:37,189 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:15:44,179 - WARNING -  * Debugger is active!
+2025-04-13 21:15:44,199 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:16:09,402 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 21:16:09,403 - INFO - OCR initialized with GPU support.
+2025-04-13 21:16:09,404 - INFO - Checking GPU status...
+2025-04-13 21:16:09,404 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 21:16:09,404 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 21:16:09,404 - INFO - Initializing EasyOCR reader...
+2025-04-13 21:16:09,404 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 21:16:11,510 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 21:16:11,592 - INFO - CUDA acceleration: Disabled
+2025-04-13 21:16:11,592 - INFO - Using 2 threads for parallel processing
+2025-04-13 21:16:11,617 - INFO - Found 1 brand folders in S3.
+2025-04-13 21:16:11,617 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 21:16:11,617 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 21:16:11,753 - INFO - Found 5 images in UWELL folder
+2025-04-13 21:16:11,753 - INFO - Using 1 threads and batch size of 5
+2025-04-13 21:16:11,753 - INFO - Processing batch 1/1
+2025-04-13 21:16:11,774 - ERROR - Error processing Screenshot 2025-03-04 at 5.20.52 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:16:11,775 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.09 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:16:11,775 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.25 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:16:11,775 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.57 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:16:11,775 - ERROR - Error processing Screenshot 2025-03-04 at 5.24.50 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:16:12,030 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 21:16:12,031 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-13 21:16:12,032 - INFO - 
+Best method statistics:
+2025-04-13 21:16:12,032 - INFO - 
+Processed 5 images in 0.41 seconds
+2025-04-13 21:16:12,032 - INFO - Average time per image: 0.08 seconds
+2025-04-13 21:16:12,033 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 21:16:14,144 - INFO - 127.0.0.1 - - [13/Apr/2025 21:16:14] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 21:16:16,962 - INFO - 127.0.0.1 - - [13/Apr/2025 21:16:16] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 21:16:18,046 - INFO - 127.0.0.1 - - [13/Apr/2025 21:16:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 21:21:11,260 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:21:13,891 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:21:20,754 - WARNING -  * Debugger is active!
+2025-04-13 21:21:20,802 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:21:37,923 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 21:21:37,923 - INFO - OCR initialized with GPU support.
+2025-04-13 21:21:37,924 - INFO - Checking GPU status...
+2025-04-13 21:21:37,924 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 21:21:37,924 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 21:21:37,924 - INFO - Initializing EasyOCR reader...
+2025-04-13 21:21:37,924 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 21:21:39,951 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 21:21:40,029 - INFO - CUDA acceleration: Disabled
+2025-04-13 21:21:40,029 - INFO - Using 2 threads for parallel processing
+2025-04-13 21:21:40,051 - INFO - Found 1 brand folders in S3.
+2025-04-13 21:21:40,051 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 21:21:40,051 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 21:21:40,236 - INFO - Found 5 images in UWELL folder
+2025-04-13 21:21:40,236 - INFO - Using 1 threads and batch size of 5
+2025-04-13 21:21:40,236 - INFO - Processing batch 1/1
+2025-04-13 21:21:40,250 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.20.52 PM.png
+2025-04-13 21:21:40,250 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.09 PM.png
+2025-04-13 21:21:40,250 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.25 PM.png
+2025-04-13 21:21:40,251 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.57 PM.png
+2025-04-13 21:21:40,251 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.24.50 PM.png
+2025-04-13 21:21:40,429 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 21:21:40,429 - INFO - 
+Best method statistics:
+2025-04-13 21:21:40,429 - INFO - 
+Processed 5 images in 0.38 seconds
+2025-04-13 21:21:40,429 - INFO - Average time per image: 0.08 seconds
+2025-04-13 21:21:40,431 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 21:21:40,476 - INFO - 127.0.0.1 - - [13/Apr/2025 21:21:40] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 21:21:43,796 - INFO - 127.0.0.1 - - [13/Apr/2025 21:21:43] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 21:21:43,796 - INFO - 127.0.0.1 - - [13/Apr/2025 21:21:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 21:25:11,973 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:25:14,391 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:25:21,107 - WARNING -  * Debugger is active!
+2025-04-13 21:25:21,151 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:27:08,632 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:27:10,722 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:27:17,570 - WARNING -  * Debugger is active!
+2025-04-13 21:27:17,591 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:27:42,648 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 21:27:42,649 - INFO - OCR initialized with GPU support.
+2025-04-13 21:27:42,650 - INFO - Checking GPU status...
+2025-04-13 21:27:42,650 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 21:27:42,650 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 21:27:42,650 - INFO - Initializing EasyOCR reader...
+2025-04-13 21:27:42,650 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 21:27:44,686 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 21:27:44,797 - INFO - CUDA acceleration: Disabled
+2025-04-13 21:27:44,797 - INFO - Using 2 threads for parallel processing
+2025-04-13 21:27:44,821 - INFO - Found 1 brand folders in S3.
+2025-04-13 21:27:44,821 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 21:27:44,821 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 21:27:44,990 - INFO - Found 5 images in UWELL folder
+2025-04-13 21:27:44,990 - INFO - Using 1 threads and batch size of 5
+2025-04-13 21:27:44,990 - INFO - Processing batch 1/1
+2025-04-13 21:27:45,010 - ERROR - Error processing Screenshot 2025-03-04 at 5.20.52 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:27:45,011 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.09 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:27:45,011 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.25 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:27:45,011 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.57 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:27:45,011 - ERROR - Error processing Screenshot 2025-03-04 at 5.24.50 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:27:45,193 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 21:27:45,195 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-13 21:27:45,195 - INFO - 
+Best method statistics:
+2025-04-13 21:27:45,195 - INFO - 
+Processed 5 images in 0.37 seconds
+2025-04-13 21:27:45,195 - INFO - Average time per image: 0.07 seconds
+2025-04-13 21:27:45,196 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 21:27:47,269 - INFO - 127.0.0.1 - - [13/Apr/2025 21:27:47] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 21:27:50,979 - INFO - 127.0.0.1 - - [13/Apr/2025 21:27:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 21:27:50,980 - INFO - 127.0.0.1 - - [13/Apr/2025 21:27:50] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 21:29:57,057 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:29:57,060 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:29:59,297 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:30:05,683 - WARNING -  * Debugger is active!
+2025-04-13 21:30:05,702 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:31:58,223 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:32:00,331 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:32:06,874 - WARNING -  * Debugger is active!
+2025-04-13 21:32:06,938 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:32:39,994 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:32:39,998 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:32:42,079 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:32:48,412 - WARNING -  * Debugger is active!
+2025-04-13 21:32:48,432 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:34:15,176 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:34:17,256 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:34:23,824 - WARNING -  * Debugger is active!
+2025-04-13 21:34:23,861 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:34:52,369 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:34:54,275 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:35:00,586 - WARNING -  * Debugger is active!
+2025-04-13 21:35:00,611 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:35:22,839 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:35:24,787 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:35:31,423 - WARNING -  * Debugger is active!
+2025-04-13 21:35:31,446 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:35:56,457 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 21:35:56,458 - INFO - OCR initialized with GPU support.
+2025-04-13 21:35:56,459 - INFO - Checking GPU status...
+2025-04-13 21:35:56,459 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 21:35:56,459 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 21:35:56,459 - INFO - Initializing EasyOCR reader...
+2025-04-13 21:35:56,459 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 21:35:58,475 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 21:35:58,546 - INFO - CUDA acceleration: Disabled
+2025-04-13 21:35:58,546 - INFO - Using 2 threads for parallel processing
+2025-04-13 21:35:58,566 - INFO - Found 1 brand folders in S3.
+2025-04-13 21:35:58,566 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 21:35:58,566 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 21:35:58,704 - INFO - Found 5 images in UWELL folder
+2025-04-13 21:35:58,704 - INFO - Using 1 threads and batch size of 5
+2025-04-13 21:35:58,704 - INFO - Processing batch 1/1
+2025-04-13 21:35:58,719 - ERROR - Error processing Screenshot 2025-03-04 at 5.20.52 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:35:58,721 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.09 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:35:58,723 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.25 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:35:58,723 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.57 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:35:58,723 - ERROR - Error processing Screenshot 2025-03-04 at 5.24.50 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:35:58,898 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 21:35:58,899 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-13 21:35:58,900 - INFO - 
+Best method statistics:
+2025-04-13 21:35:58,900 - INFO - 
+Processed 5 images in 0.33 seconds
+2025-04-13 21:35:58,900 - INFO - Average time per image: 0.07 seconds
+2025-04-13 21:35:58,900 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 21:36:00,969 - INFO - 127.0.0.1 - - [13/Apr/2025 21:36:00] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 21:36:03,948 - INFO - 127.0.0.1 - - [13/Apr/2025 21:36:03] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 21:36:04,868 - INFO - 127.0.0.1 - - [13/Apr/2025 21:36:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 21:42:50,145 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:42:52,594 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:42:59,848 - WARNING -  * Debugger is active!
+2025-04-13 21:42:59,909 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:43:24,096 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 21:43:24,097 - INFO - OCR initialized with GPU support.
+2025-04-13 21:43:24,098 - INFO - Checking GPU status...
+2025-04-13 21:43:24,098 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 21:43:24,098 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 21:43:24,098 - INFO - Initializing EasyOCR reader...
+2025-04-13 21:43:24,098 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 21:43:26,121 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 21:43:26,179 - INFO - CUDA acceleration: Disabled
+2025-04-13 21:43:26,179 - INFO - Using 2 threads for parallel processing
+2025-04-13 21:43:26,199 - INFO - Found 1 brand folders in S3.
+2025-04-13 21:43:26,199 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 21:43:26,199 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 21:43:26,432 - INFO - Found 5 images in UWELL folder
+2025-04-13 21:43:26,432 - INFO - Using 1 threads and batch size of 5
+2025-04-13 21:43:26,432 - INFO - Processing batch 1/1
+2025-04-13 21:43:26,445 - ERROR - Error processing Screenshot 2025-03-04 at 5.20.52 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:43:26,445 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.09 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:43:26,445 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.25 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:43:26,445 - ERROR - Error processing Screenshot 2025-03-04 at 5.23.57 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:43:26,445 - ERROR - Error processing Screenshot 2025-03-04 at 5.24.50 PM.png: 'str' object has no attribute 'name'
+2025-04-13 21:43:26,675 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 21:43:26,676 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-13 21:43:26,676 - INFO - 
+Best method statistics:
+2025-04-13 21:43:26,677 - INFO - 
+Processed 5 images in 0.48 seconds
+2025-04-13 21:43:26,677 - INFO - Average time per image: 0.10 seconds
+2025-04-13 21:43:26,677 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 21:43:28,766 - INFO - 127.0.0.1 - - [13/Apr/2025 21:43:28] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 21:43:32,163 - INFO - 127.0.0.1 - - [13/Apr/2025 21:43:32] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 21:43:32,163 - INFO - 127.0.0.1 - - [13/Apr/2025 21:43:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 21:47:07,679 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:47:10,059 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:47:17,055 - WARNING -  * Debugger is active!
+2025-04-13 21:47:17,076 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:47:47,151 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 21:47:47,152 - INFO - OCR initialized with GPU support.
+2025-04-13 21:47:47,152 - INFO - Checking GPU status...
+2025-04-13 21:47:47,152 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 21:47:47,152 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 21:47:47,152 - INFO - Initializing EasyOCR reader...
+2025-04-13 21:47:47,153 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 21:47:49,162 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 21:47:49,274 - INFO - CUDA acceleration: Disabled
+2025-04-13 21:47:49,274 - INFO - Using 2 threads for parallel processing
+2025-04-13 21:47:49,297 - INFO - Found 1 brand folders in S3.
+2025-04-13 21:47:49,297 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 21:47:49,297 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 21:47:49,485 - INFO - Found 5 images in UWELL folder
+2025-04-13 21:47:49,485 - INFO - Using 1 threads and batch size of 5
+2025-04-13 21:47:49,485 - INFO - Processing batch 1/1
+2025-04-13 21:47:49,507 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 21:47:49,507 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 21:47:49,507 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 21:47:49,507 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 21:47:49,507 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 21:47:49,696 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 21:47:49,696 - INFO - 
+Best method statistics:
+2025-04-13 21:47:49,696 - INFO - 
+Processed 5 images in 0.40 seconds
+2025-04-13 21:47:49,696 - INFO - Average time per image: 0.08 seconds
+2025-04-13 21:47:49,698 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 21:47:51,803 - INFO - 127.0.0.1 - - [13/Apr/2025 21:47:51] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 21:47:55,051 - INFO - 127.0.0.1 - - [13/Apr/2025 21:47:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 21:47:55,051 - INFO - 127.0.0.1 - - [13/Apr/2025 21:47:55] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 21:49:51,856 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:49:51,858 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 21:49:54,160 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 21:50:00,686 - WARNING -  * Debugger is active!
+2025-04-13 21:50:00,702 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 21:50:30,160 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 21:50:30,161 - INFO - OCR initialized with GPU support.
+2025-04-13 21:50:30,161 - INFO - Checking GPU status...
+2025-04-13 21:50:30,161 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 21:50:30,161 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 21:50:30,161 - INFO - Initializing EasyOCR reader...
+2025-04-13 21:50:30,162 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 21:50:32,234 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 21:50:32,298 - INFO - CUDA acceleration: Disabled
+2025-04-13 21:50:32,298 - INFO - Using 2 threads for parallel processing
+2025-04-13 21:50:32,327 - INFO - Found 1 brand folders in S3.
+2025-04-13 21:50:32,328 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 21:50:32,328 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 21:50:32,466 - INFO - Found 5 images in UWELL folder
+2025-04-13 21:50:32,466 - INFO - Using 1 threads and batch size of 5
+2025-04-13 21:50:32,466 - INFO - Processing batch 1/1
+2025-04-13 21:50:32,477 - ERROR - Local image not found: c9orzaCeF8NsHy+pITmG3gYk3knbRELOTTtT7+4X
+2025-04-13 21:50:32,477 - ERROR - Local image not found: c9orzaCeF8NsHy+pITmG3gYk3knbRELOTTtT7+4X
+2025-04-13 21:50:32,478 - ERROR - Local image not found: c9orzaCeF8NsHy+pITmG3gYk3knbRELOTTtT7+4X
+2025-04-13 21:50:32,478 - ERROR - Local image not found: c9orzaCeF8NsHy+pITmG3gYk3knbRELOTTtT7+4X
+2025-04-13 21:50:32,478 - ERROR - Local image not found: c9orzaCeF8NsHy+pITmG3gYk3knbRELOTTtT7+4X
+2025-04-13 21:50:32,656 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 21:50:32,656 - INFO - 
+Best method statistics:
+2025-04-13 21:50:32,656 - INFO - 
+Processed 5 images in 0.33 seconds
+2025-04-13 21:50:32,656 - INFO - Average time per image: 0.07 seconds
+2025-04-13 21:50:32,659 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 21:50:34,850 - INFO - 127.0.0.1 - - [13/Apr/2025 21:50:34] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 21:50:38,304 - INFO - 127.0.0.1 - - [13/Apr/2025 21:50:38] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 21:50:38,304 - INFO - 127.0.0.1 - - [13/Apr/2025 21:50:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 22:23:42,817 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:23:46,087 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 22:23:52,946 - WARNING -  * Debugger is active!
+2025-04-13 22:23:52,969 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 22:24:09,758 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 22:24:09,759 - INFO - OCR initialized with GPU support.
+2025-04-13 22:24:09,760 - INFO - Checking GPU status...
+2025-04-13 22:24:09,763 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 22:24:09,763 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 22:24:09,763 - INFO - Initializing EasyOCR reader...
+2025-04-13 22:24:09,763 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 22:24:11,784 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 22:24:11,875 - INFO - CUDA acceleration: Disabled
+2025-04-13 22:24:11,875 - INFO - Using 2 threads for parallel processing
+2025-04-13 22:24:11,912 - INFO - Found 1 brand folders in S3.
+2025-04-13 22:24:11,912 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 22:24:11,912 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 22:24:12,080 - INFO - Found 5 images in UWELL folder
+2025-04-13 22:24:12,080 - INFO - Using 1 threads and batch size of 5
+2025-04-13 22:24:12,080 - INFO - Processing batch 1/1
+2025-04-13 22:24:12,094 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:24:12,094 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:24:12,094 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:24:12,095 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:24:12,095 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:24:12,318 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 22:24:12,318 - INFO - 
+Best method statistics:
+2025-04-13 22:24:12,318 - INFO - 
+Processed 5 images in 0.41 seconds
+2025-04-13 22:24:12,318 - INFO - Average time per image: 0.08 seconds
+2025-04-13 22:24:12,320 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 22:24:14,461 - INFO - 127.0.0.1 - - [13/Apr/2025 22:24:14] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 22:24:17,907 - INFO - 127.0.0.1 - - [13/Apr/2025 22:24:17] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 22:24:17,907 - INFO - 127.0.0.1 - - [13/Apr/2025 22:24:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 22:24:56,887 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:24:59,113 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 22:25:05,740 - WARNING -  * Debugger is active!
+2025-04-13 22:25:05,759 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 22:25:39,554 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 22:25:39,555 - INFO - OCR initialized with GPU support.
+2025-04-13 22:25:39,560 - INFO - Checking GPU status...
+2025-04-13 22:25:39,560 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 22:25:39,560 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 22:25:39,560 - INFO - Initializing EasyOCR reader...
+2025-04-13 22:25:39,561 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 22:25:41,568 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 22:25:41,640 - INFO - CUDA acceleration: Disabled
+2025-04-13 22:25:41,640 - INFO - Using 2 threads for parallel processing
+2025-04-13 22:25:41,660 - INFO - Found 1 brand folders in S3.
+2025-04-13 22:25:41,660 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 22:25:41,660 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 22:25:41,798 - INFO - Found 5 images in UWELL folder
+2025-04-13 22:25:41,798 - INFO - Using 1 threads and batch size of 5
+2025-04-13 22:25:41,798 - INFO - Processing batch 1/1
+2025-04-13 22:25:41,811 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:25:41,811 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:25:41,811 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:25:41,811 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:25:41,811 - ERROR - Error in wrapper for cYLh9ko2mk+LWTv91VuljZ0eH9sXjKwkkw7Y1t: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:25:42,162 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 22:25:42,162 - INFO - 
+Best method statistics:
+2025-04-13 22:25:42,162 - INFO - 
+Processed 5 images in 0.50 seconds
+2025-04-13 22:25:42,162 - INFO - Average time per image: 0.10 seconds
+2025-04-13 22:25:42,164 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 22:25:43,264 - INFO - 127.0.0.1 - - [13/Apr/2025 22:25:43] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 22:25:46,645 - INFO - 127.0.0.1 - - [13/Apr/2025 22:25:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 22:25:46,645 - INFO - 127.0.0.1 - - [13/Apr/2025 22:25:46] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 22:27:53,827 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:27:56,176 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 22:28:02,716 - WARNING -  * Debugger is active!
+2025-04-13 22:28:02,784 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 22:28:26,552 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 22:28:26,554 - INFO - OCR initialized with GPU support.
+2025-04-13 22:28:26,554 - INFO - Checking GPU status...
+2025-04-13 22:28:26,554 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 22:28:26,554 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 22:28:26,554 - INFO - Initializing EasyOCR reader...
+2025-04-13 22:28:26,555 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 22:28:28,655 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 22:28:28,722 - INFO - CUDA acceleration: Disabled
+2025-04-13 22:28:28,722 - INFO - Using 2 threads for parallel processing
+2025-04-13 22:28:28,742 - INFO - Found 1 brand folders in S3.
+2025-04-13 22:28:28,742 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 22:28:28,742 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 22:28:28,921 - INFO - Found 5 images in UWELL folder
+2025-04-13 22:28:28,921 - INFO - Using 1 threads and batch size of 5
+2025-04-13 22:28:28,921 - INFO - Processing batch 1/1
+2025-04-13 22:28:28,933 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.20.52 PM.png: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:28:28,933 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.23.09 PM.png: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:28:28,933 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.23.25 PM.png: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:28:28,933 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.23.57 PM.png: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:28:28,933 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.24.50 PM.png: Invalid S3 URI: Must start with 's3://'
+2025-04-13 22:28:29,109 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 22:28:29,109 - INFO - 
+Best method statistics:
+2025-04-13 22:28:29,109 - INFO - 
+Processed 5 images in 0.37 seconds
+2025-04-13 22:28:29,109 - INFO - Average time per image: 0.07 seconds
+2025-04-13 22:28:29,111 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 22:28:31,201 - INFO - 127.0.0.1 - - [13/Apr/2025 22:28:31] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 22:28:33,401 - INFO - 127.0.0.1 - - [13/Apr/2025 22:28:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 22:28:34,107 - INFO - 127.0.0.1 - - [13/Apr/2025 22:28:34] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 22:45:36,739 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:45:36,784 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:45:39,723 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 22:45:46,477 - WARNING -  * Debugger is active!
+2025-04-13 22:45:46,560 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 22:46:24,149 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 22:46:24,149 - INFO - OCR initialized with GPU support.
+2025-04-13 22:46:24,150 - INFO - Checking GPU status...
+2025-04-13 22:46:24,150 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 22:46:24,150 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 22:46:24,150 - INFO - Initializing EasyOCR reader...
+2025-04-13 22:46:24,150 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 22:46:26,274 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 22:46:26,350 - INFO - CUDA acceleration: Disabled
+2025-04-13 22:46:26,350 - INFO - Using 2 threads for parallel processing
+2025-04-13 22:46:26,369 - INFO - Found 1 brand folders in S3.
+2025-04-13 22:46:26,369 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 22:46:26,370 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 22:46:26,541 - INFO - Found 5 images in UWELL folder
+2025-04-13 22:46:26,541 - INFO - Using 1 threads and batch size of 5
+2025-04-13 22:46:26,541 - INFO - Processing batch 1/1
+2025-04-13 22:46:26,555 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.20.52 PM.png: load_image_from_s3() got multiple values for argument 'aws_access_key'
+2025-04-13 22:46:26,555 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.23.09 PM.png: load_image_from_s3() got multiple values for argument 'aws_access_key'
+2025-04-13 22:46:26,555 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.23.25 PM.png: load_image_from_s3() got multiple values for argument 'aws_access_key'
+2025-04-13 22:46:26,555 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.23.57 PM.png: load_image_from_s3() got multiple values for argument 'aws_access_key'
+2025-04-13 22:46:26,555 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.24.50 PM.png: load_image_from_s3() got multiple values for argument 'aws_access_key'
+2025-04-13 22:46:26,754 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 22:46:26,754 - INFO - 
+Best method statistics:
+2025-04-13 22:46:26,754 - INFO - 
+Processed 5 images in 0.38 seconds
+2025-04-13 22:46:26,754 - INFO - Average time per image: 0.08 seconds
+2025-04-13 22:46:26,757 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 22:46:28,865 - INFO - 127.0.0.1 - - [13/Apr/2025 22:46:28] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 22:46:31,395 - INFO - 127.0.0.1 - - [13/Apr/2025 22:46:31] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 22:46:32,226 - INFO - 127.0.0.1 - - [13/Apr/2025 22:46:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 22:47:52,007 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:47:54,458 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 22:48:00,836 - WARNING -  * Debugger is active!
+2025-04-13 22:48:00,858 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 22:48:23,229 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:48:25,204 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 22:48:31,383 - WARNING -  * Debugger is active!
+2025-04-13 22:48:31,414 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 22:48:48,101 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 22:48:48,102 - INFO - OCR initialized with GPU support.
+2025-04-13 22:48:48,103 - INFO - Checking GPU status...
+2025-04-13 22:48:48,103 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 22:48:48,103 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 22:48:48,103 - INFO - Initializing EasyOCR reader...
+2025-04-13 22:48:48,103 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 22:48:50,332 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 22:48:50,414 - INFO - CUDA acceleration: Disabled
+2025-04-13 22:48:50,414 - INFO - Using 2 threads for parallel processing
+2025-04-13 22:48:50,444 - INFO - Found 1 brand folders in S3.
+2025-04-13 22:48:50,444 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 22:48:50,444 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 22:48:50,592 - INFO - Found 5 images in UWELL folder
+2025-04-13 22:48:50,592 - INFO - Using 1 threads and batch size of 5
+2025-04-13 22:48:50,592 - INFO - Processing batch 1/1
+2025-04-13 22:48:50,604 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.20.52 PM.png: load_image_from_s3() takes 1 positional argument but 2 positional arguments (and 3 keyword-only arguments) were given
+2025-04-13 22:48:50,605 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.23.09 PM.png: load_image_from_s3() takes 1 positional argument but 2 positional arguments (and 3 keyword-only arguments) were given
+2025-04-13 22:48:50,605 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.23.25 PM.png: load_image_from_s3() takes 1 positional argument but 2 positional arguments (and 3 keyword-only arguments) were given
+2025-04-13 22:48:50,605 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.23.57 PM.png: load_image_from_s3() takes 1 positional argument but 2 positional arguments (and 3 keyword-only arguments) were given
+2025-04-13 22:48:50,605 - ERROR - Error in wrapper for Screenshot 2025-03-04 at 5.24.50 PM.png: load_image_from_s3() takes 1 positional argument but 2 positional arguments (and 3 keyword-only arguments) were given
+2025-04-13 22:48:50,780 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 22:48:50,780 - INFO - 
+Best method statistics:
+2025-04-13 22:48:50,780 - INFO - 
+Processed 5 images in 0.34 seconds
+2025-04-13 22:48:50,780 - INFO - Average time per image: 0.07 seconds
+2025-04-13 22:48:50,783 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 22:48:52,883 - INFO - 127.0.0.1 - - [13/Apr/2025 22:48:52] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 22:48:55,232 - INFO - 127.0.0.1 - - [13/Apr/2025 22:48:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 22:48:56,182 - INFO - 127.0.0.1 - - [13/Apr/2025 22:48:56] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 22:49:40,345 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:49:42,525 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 22:49:49,429 - WARNING -  * Debugger is active!
+2025-04-13 22:49:49,450 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 22:50:05,906 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 22:50:05,907 - INFO - OCR initialized with GPU support.
+2025-04-13 22:50:05,908 - INFO - Checking GPU status...
+2025-04-13 22:50:05,908 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 22:50:05,908 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 22:50:05,908 - INFO - Initializing EasyOCR reader...
+2025-04-13 22:50:05,908 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 22:50:07,922 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 22:50:08,010 - INFO - CUDA acceleration: Disabled
+2025-04-13 22:50:08,010 - INFO - Using 2 threads for parallel processing
+2025-04-13 22:50:08,033 - INFO - Found 1 brand folders in S3.
+2025-04-13 22:50:08,033 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 22:50:08,033 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 22:50:08,222 - INFO - Found 5 images in UWELL folder
+2025-04-13 22:50:08,222 - INFO - Using 1 threads and batch size of 5
+2025-04-13 22:50:08,222 - INFO - Processing batch 1/1
+2025-04-13 22:50:08,339 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:50:08,339 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.20.52 PM.png
+2025-04-13 22:50:08,427 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:50:08,427 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.09 PM.png
+2025-04-13 22:50:08,761 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:50:08,762 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.25 PM.png
+2025-04-13 22:50:08,848 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:50:08,849 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.57 PM.png
+2025-04-13 22:50:08,949 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:50:08,950 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.24.50 PM.png
+2025-04-13 22:50:09,124 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 22:50:09,124 - INFO - 
+Best method statistics:
+2025-04-13 22:50:09,124 - INFO - 
+Processed 5 images in 1.09 seconds
+2025-04-13 22:50:09,124 - INFO - Average time per image: 0.22 seconds
+2025-04-13 22:50:09,127 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 22:50:11,227 - INFO - 127.0.0.1 - - [13/Apr/2025 22:50:11] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 22:50:14,500 - INFO - 127.0.0.1 - - [13/Apr/2025 22:50:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 22:50:14,500 - INFO - 127.0.0.1 - - [13/Apr/2025 22:50:14] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 22:52:10,977 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:52:13,348 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 22:52:20,234 - WARNING -  * Debugger is active!
+2025-04-13 22:52:20,254 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 22:52:39,819 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 22:52:39,819 - INFO - OCR initialized with GPU support.
+2025-04-13 22:52:39,820 - INFO - Checking GPU status...
+2025-04-13 22:52:39,820 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 22:52:39,820 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 22:52:39,820 - INFO - Initializing EasyOCR reader...
+2025-04-13 22:52:39,820 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 22:52:41,867 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 22:52:41,940 - INFO - CUDA acceleration: Disabled
+2025-04-13 22:52:41,940 - INFO - Using 2 threads for parallel processing
+2025-04-13 22:52:41,959 - INFO - Found 1 brand folders in S3.
+2025-04-13 22:52:41,959 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 22:52:41,959 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 22:52:42,098 - INFO - Found 5 images in UWELL folder
+2025-04-13 22:52:42,098 - INFO - Using 1 threads and batch size of 5
+2025-04-13 22:52:42,098 - INFO - Processing batch 1/1
+2025-04-13 22:52:42,197 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:52:42,198 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.20.52 PM.png
+2025-04-13 22:52:42,286 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:52:42,286 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.09 PM.png
+2025-04-13 22:52:42,592 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:52:42,592 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.25 PM.png
+2025-04-13 22:52:42,680 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:52:42,680 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.57 PM.png
+2025-04-13 22:52:42,769 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:52:42,769 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.24.50 PM.png
+2025-04-13 22:52:42,924 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 22:52:42,924 - INFO - 
+Best method statistics:
+2025-04-13 22:52:42,924 - INFO - 
+Processed 5 images in 0.96 seconds
+2025-04-13 22:52:42,924 - INFO - Average time per image: 0.19 seconds
+2025-04-13 22:52:42,926 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 22:52:45,017 - INFO - 127.0.0.1 - - [13/Apr/2025 22:52:45] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 22:52:48,165 - INFO - 127.0.0.1 - - [13/Apr/2025 22:52:48] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 22:52:48,165 - INFO - 127.0.0.1 - - [13/Apr/2025 22:52:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 22:54:06,639 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:54:08,827 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 22:54:15,525 - WARNING -  * Debugger is active!
+2025-04-13 22:54:15,546 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 22:54:31,124 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 22:54:31,126 - INFO - OCR initialized with GPU support.
+2025-04-13 22:54:31,127 - INFO - Checking GPU status...
+2025-04-13 22:54:31,127 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 22:54:31,127 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 22:54:31,127 - INFO - Initializing EasyOCR reader...
+2025-04-13 22:54:31,127 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 22:54:33,145 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 22:54:33,220 - INFO - CUDA acceleration: Disabled
+2025-04-13 22:54:33,220 - INFO - Using 2 threads for parallel processing
+2025-04-13 22:54:33,242 - INFO - Found 1 brand folders in S3.
+2025-04-13 22:54:33,242 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 22:54:33,242 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 22:54:33,457 - INFO - Found 5 images in UWELL folder
+2025-04-13 22:54:33,458 - INFO - Using 1 threads and batch size of 5
+2025-04-13 22:54:33,458 - INFO - Processing batch 1/1
+2025-04-13 22:54:33,615 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:54:33,616 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.20.52 PM.png
+2025-04-13 22:54:33,694 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:54:33,694 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.09 PM.png
+2025-04-13 22:54:33,981 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:54:33,981 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.25 PM.png
+2025-04-13 22:54:34,139 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:54:34,140 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.57 PM.png
+2025-04-13 22:54:34,227 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:54:34,227 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.24.50 PM.png
+2025-04-13 22:54:34,376 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 22:54:34,376 - INFO - 
+Best method statistics:
+2025-04-13 22:54:34,376 - INFO - 
+Processed 5 images in 1.13 seconds
+2025-04-13 22:54:34,376 - INFO - Average time per image: 0.23 seconds
+2025-04-13 22:54:34,381 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 22:54:36,489 - INFO - 127.0.0.1 - - [13/Apr/2025 22:54:36] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 22:54:39,915 - INFO - 127.0.0.1 - - [13/Apr/2025 22:54:39] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 22:54:39,915 - INFO - 127.0.0.1 - - [13/Apr/2025 22:54:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 22:55:27,581 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:55:29,883 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 22:55:36,527 - WARNING -  * Debugger is active!
+2025-04-13 22:55:36,546 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 22:55:56,971 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 22:55:56,971 - INFO - OCR initialized with GPU support.
+2025-04-13 22:55:56,972 - INFO - Checking GPU status...
+2025-04-13 22:55:56,972 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 22:55:56,972 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 22:55:56,972 - INFO - Initializing EasyOCR reader...
+2025-04-13 22:55:56,972 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 22:55:58,977 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 22:55:59,075 - INFO - CUDA acceleration: Disabled
+2025-04-13 22:55:59,075 - INFO - Using 2 threads for parallel processing
+2025-04-13 22:55:59,100 - INFO - Found 1 brand folders in S3.
+2025-04-13 22:55:59,100 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 22:55:59,100 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 22:55:59,240 - INFO - Found 5 images in UWELL folder
+2025-04-13 22:55:59,240 - INFO - Using 1 threads and batch size of 5
+2025-04-13 22:55:59,240 - INFO - Processing batch 1/1
+2025-04-13 22:55:59,345 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:55:59,345 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.20.52 PM.png
+2025-04-13 22:55:59,424 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:55:59,425 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.09 PM.png
+2025-04-13 22:55:59,686 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:55:59,686 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.25 PM.png
+2025-04-13 22:55:59,755 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:55:59,755 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.57 PM.png
+2025-04-13 22:55:59,836 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:55:59,836 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.24.50 PM.png
+2025-04-13 22:55:59,984 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 22:55:59,985 - INFO - 
+Best method statistics:
+2025-04-13 22:55:59,985 - INFO - 
+Processed 5 images in 0.88 seconds
+2025-04-13 22:55:59,985 - INFO - Average time per image: 0.18 seconds
+2025-04-13 22:55:59,988 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 22:56:01,070 - INFO - 127.0.0.1 - - [13/Apr/2025 22:56:01] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 22:56:04,448 - INFO - 127.0.0.1 - - [13/Apr/2025 22:56:04] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 22:56:04,449 - INFO - 127.0.0.1 - - [13/Apr/2025 22:56:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 22:59:13,687 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 22:59:16,344 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 22:59:22,936 - WARNING -  * Debugger is active!
+2025-04-13 22:59:22,964 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 22:59:47,633 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 22:59:47,634 - INFO - OCR initialized with GPU support.
+2025-04-13 22:59:47,635 - INFO - Checking GPU status...
+2025-04-13 22:59:47,635 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 22:59:47,635 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 22:59:47,635 - INFO - Initializing EasyOCR reader...
+2025-04-13 22:59:47,635 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 22:59:49,685 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 22:59:49,764 - INFO - CUDA acceleration: Disabled
+2025-04-13 22:59:49,764 - INFO - Using 2 threads for parallel processing
+2025-04-13 22:59:49,783 - INFO - Found 1 brand folders in S3.
+2025-04-13 22:59:49,783 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 22:59:49,783 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 22:59:49,903 - INFO - Found 5 images in UWELL folder
+2025-04-13 22:59:49,903 - INFO - Using 1 threads and batch size of 5
+2025-04-13 22:59:49,903 - INFO - Processing batch 1/1
+2025-04-13 22:59:50,000 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:59:50,001 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.20.52 PM.png
+2025-04-13 22:59:50,083 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:59:50,083 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.09 PM.png
+2025-04-13 22:59:50,363 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:59:50,364 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.25 PM.png
+2025-04-13 22:59:50,460 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:59:50,460 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.57 PM.png
+2025-04-13 22:59:50,549 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 22:59:50,550 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.24.50 PM.png
+2025-04-13 22:59:50,702 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 22:59:50,702 - INFO - 
+Best method statistics:
+2025-04-13 22:59:50,702 - INFO - 
+Processed 5 images in 0.92 seconds
+2025-04-13 22:59:50,702 - INFO - Average time per image: 0.18 seconds
+2025-04-13 22:59:50,705 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 22:59:52,807 - INFO - 127.0.0.1 - - [13/Apr/2025 22:59:52] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 22:59:55,971 - INFO - 127.0.0.1 - - [13/Apr/2025 22:59:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 22:59:55,971 - INFO - 127.0.0.1 - - [13/Apr/2025 22:59:55] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 23:01:06,430 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 23:01:08,670 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 23:01:15,203 - WARNING -  * Debugger is active!
+2025-04-13 23:01:15,224 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 23:01:57,187 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 23:01:57,188 - INFO - OCR initialized with GPU support.
+2025-04-13 23:01:57,188 - INFO - Checking GPU status...
+2025-04-13 23:01:57,189 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 23:01:57,189 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 23:01:57,189 - INFO - Initializing EasyOCR reader...
+2025-04-13 23:01:57,189 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 23:01:59,198 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 23:01:59,289 - INFO - CUDA acceleration: Disabled
+2025-04-13 23:01:59,289 - INFO - Using 2 threads for parallel processing
+2025-04-13 23:01:59,321 - INFO - Found 1 brand folders in S3.
+2025-04-13 23:01:59,321 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 23:01:59,321 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 23:01:59,494 - INFO - Found 5 images in UWELL folder
+2025-04-13 23:01:59,494 - INFO - Using 1 threads and batch size of 5
+2025-04-13 23:01:59,494 - INFO - Processing batch 1/1
+2025-04-13 23:01:59,623 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:01:59,623 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.20.52 PM.png
+2025-04-13 23:01:59,722 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:01:59,722 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.09 PM.png
+2025-04-13 23:02:00,026 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:02:00,026 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.25 PM.png
+2025-04-13 23:02:00,116 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:02:00,117 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.57 PM.png
+2025-04-13 23:02:00,203 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:02:00,204 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.24.50 PM.png
+2025-04-13 23:02:00,353 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 23:02:00,353 - INFO - 
+Best method statistics:
+2025-04-13 23:02:00,353 - INFO - 
+Processed 5 images in 1.03 seconds
+2025-04-13 23:02:00,353 - INFO - Average time per image: 0.21 seconds
+2025-04-13 23:02:00,357 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 23:02:02,442 - INFO - 127.0.0.1 - - [13/Apr/2025 23:02:02] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 23:02:05,822 - INFO - 127.0.0.1 - - [13/Apr/2025 23:02:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 23:02:05,822 - INFO - 127.0.0.1 - - [13/Apr/2025 23:02:05] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 23:06:20,802 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 23:06:23,143 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 23:06:29,652 - WARNING -  * Debugger is active!
+2025-04-13 23:06:29,676 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 23:06:46,714 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 23:06:46,717 - INFO - OCR initialized with GPU support.
+2025-04-13 23:06:46,717 - INFO - Checking GPU status...
+2025-04-13 23:06:46,717 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 23:06:46,717 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 23:06:46,717 - INFO - Initializing EasyOCR reader...
+2025-04-13 23:06:46,718 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 23:06:48,888 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 23:06:48,967 - INFO - CUDA acceleration: Disabled
+2025-04-13 23:06:48,968 - INFO - Using 2 threads for parallel processing
+2025-04-13 23:06:48,998 - INFO - Found 1 brand folders in S3.
+2025-04-13 23:06:48,999 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 23:06:48,999 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 23:06:49,163 - INFO - Found 5 images in UWELL folder
+2025-04-13 23:06:49,163 - INFO - Using 1 threads and batch size of 5
+2025-04-13 23:06:49,163 - INFO - Processing batch 1/1
+2025-04-13 23:06:49,264 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:06:49,264 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.20.52 PM.png
+2025-04-13 23:06:49,342 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:06:49,343 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.09 PM.png
+2025-04-13 23:06:49,627 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:06:49,628 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.25 PM.png
+2025-04-13 23:06:49,705 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:06:49,706 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.57 PM.png
+2025-04-13 23:06:49,787 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:06:49,787 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.24.50 PM.png
+2025-04-13 23:06:49,936 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 23:06:49,936 - INFO - 
+Best method statistics:
+2025-04-13 23:06:49,936 - INFO - 
+Processed 5 images in 0.94 seconds
+2025-04-13 23:06:49,936 - INFO - Average time per image: 0.19 seconds
+2025-04-13 23:06:49,939 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 23:06:52,031 - INFO - 127.0.0.1 - - [13/Apr/2025 23:06:52] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 23:06:55,156 - INFO - 127.0.0.1 - - [13/Apr/2025 23:06:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 23:06:55,157 - INFO - 127.0.0.1 - - [13/Apr/2025 23:06:55] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 23:08:40,646 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 23:08:40,646 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 23:08:40,653 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 23:08:46,167 - WARNING -  * Debugger is active!
+2025-04-13 23:08:46,186 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 23:09:30,930 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 23:09:30,931 - INFO - OCR initialized with GPU support.
+2025-04-13 23:09:30,932 - INFO - Checking GPU status...
+2025-04-13 23:09:30,932 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 23:09:30,932 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 23:09:30,932 - INFO - Initializing EasyOCR reader...
+2025-04-13 23:09:30,933 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 23:09:32,971 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 23:09:33,049 - INFO - CUDA acceleration: Disabled
+2025-04-13 23:09:33,049 - INFO - Using 2 threads for parallel processing
+2025-04-13 23:09:33,092 - INFO - Found 1 brand folders in S3.
+2025-04-13 23:09:33,092 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 23:09:33,092 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 23:09:33,308 - INFO - Found 5 images in UWELL folder
+2025-04-13 23:09:33,308 - INFO - Using 1 threads and batch size of 5
+2025-04-13 23:09:33,308 - INFO - Processing batch 1/1
+2025-04-13 23:09:33,433 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:09:33,434 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.20.52 PM.png
+2025-04-13 23:09:33,524 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:09:33,525 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.09 PM.png
+2025-04-13 23:09:33,817 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:09:33,818 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.25 PM.png
+2025-04-13 23:09:33,917 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:09:33,917 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.57 PM.png
+2025-04-13 23:09:34,004 - ERROR - Failed to load image from S3: An error occurred (AuthorizationHeaderMalformed) when calling the GetObject operation: The authorization header is malformed; the Credential is mal-formed; expecting "<YOUR-AKID>/YYYYMMDD/REGION/SERVICE/aws4_request".
+2025-04-13 23:09:34,004 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.24.50 PM.png
+2025-04-13 23:09:34,159 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 23:09:34,159 - INFO - 
+Best method statistics:
+2025-04-13 23:09:34,159 - INFO - 
+Processed 5 images in 1.07 seconds
+2025-04-13 23:09:34,159 - INFO - Average time per image: 0.21 seconds
+2025-04-13 23:09:34,162 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 23:09:36,283 - INFO - 127.0.0.1 - - [13/Apr/2025 23:09:36] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 23:09:40,320 - INFO - 127.0.0.1 - - [13/Apr/2025 23:09:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 23:09:40,320 - INFO - 127.0.0.1 - - [13/Apr/2025 23:09:40] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 23:10:45,688 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 23:10:48,485 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 23:10:55,674 - WARNING -  * Debugger is active!
+2025-04-13 23:10:55,694 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 23:11:13,062 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 23:11:13,062 - INFO - OCR initialized with GPU support.
+2025-04-13 23:11:13,063 - INFO - Checking GPU status...
+2025-04-13 23:11:13,063 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 23:11:13,063 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 23:11:13,063 - INFO - Initializing EasyOCR reader...
+2025-04-13 23:11:13,063 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 23:11:15,055 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 23:11:15,125 - INFO - CUDA acceleration: Disabled
+2025-04-13 23:11:15,125 - INFO - Using 2 threads for parallel processing
+2025-04-13 23:11:15,153 - INFO - Found 1 brand folders in S3.
+2025-04-13 23:11:15,153 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 23:11:15,153 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 23:11:15,334 - INFO - Found 5 images in UWELL folder
+2025-04-13 23:11:15,334 - INFO - Using 1 threads and batch size of 5
+2025-04-13 23:11:15,334 - INFO - Processing batch 1/1
+2025-04-13 23:11:15,466 - ERROR - Failed to load image from S3: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-04-13 23:11:15,466 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.20.52 PM.png
+2025-04-13 23:11:15,584 - ERROR - Failed to load image from S3: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-04-13 23:11:15,584 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.09 PM.png
+2025-04-13 23:11:15,879 - ERROR - Failed to load image from S3: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-04-13 23:11:15,880 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.25 PM.png
+2025-04-13 23:11:15,969 - ERROR - Failed to load image from S3: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-04-13 23:11:15,970 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.57 PM.png
+2025-04-13 23:11:16,079 - ERROR - Failed to load image from S3: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-04-13 23:11:16,080 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.24.50 PM.png
+2025-04-13 23:11:16,232 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 23:11:16,232 - INFO - 
+Best method statistics:
+2025-04-13 23:11:16,232 - INFO - 
+Processed 5 images in 1.08 seconds
+2025-04-13 23:11:16,232 - INFO - Average time per image: 0.22 seconds
+2025-04-13 23:11:16,235 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 23:11:18,324 - INFO - 127.0.0.1 - - [13/Apr/2025 23:11:18] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 23:11:21,613 - INFO - 127.0.0.1 - - [13/Apr/2025 23:11:21] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 23:11:21,613 - INFO - 127.0.0.1 - - [13/Apr/2025 23:11:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 23:13:01,082 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 23:13:04,102 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 23:13:10,759 - WARNING -  * Debugger is active!
+2025-04-13 23:13:10,781 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 23:15:19,453 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 23:15:19,459 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 23:15:21,636 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 23:15:27,928 - WARNING -  * Debugger is active!
+2025-04-13 23:15:27,947 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 23:16:26,630 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 23:16:28,644 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 23:16:34,992 - WARNING -  * Debugger is active!
+2025-04-13 23:16:35,010 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 23:16:50,494 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 23:16:50,494 - INFO - OCR initialized with GPU support.
+2025-04-13 23:16:50,495 - INFO - Checking GPU status...
+2025-04-13 23:16:50,495 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 23:16:50,495 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 23:16:50,495 - INFO - Initializing EasyOCR reader...
+2025-04-13 23:16:50,495 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 23:16:52,651 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 23:16:52,740 - INFO - CUDA acceleration: Disabled
+2025-04-13 23:16:52,740 - INFO - Using 2 threads for parallel processing
+2025-04-13 23:16:52,759 - INFO - Found 1 brand folders in S3.
+2025-04-13 23:16:52,759 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 23:16:52,759 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 23:16:52,876 - INFO - Found 5 images in UWELL folder
+2025-04-13 23:16:52,876 - INFO - Using 1 threads and batch size of 5
+2025-04-13 23:16:52,876 - INFO - Processing batch 1/1
+2025-04-13 23:16:53,002 - ERROR - Failed to load image from S3: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-04-13 23:16:53,003 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.20.52 PM.png
+2025-04-13 23:16:53,111 - ERROR - Failed to load image from S3: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-04-13 23:16:53,111 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.09 PM.png
+2025-04-13 23:16:53,427 - ERROR - Failed to load image from S3: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-04-13 23:16:53,428 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.25 PM.png
+2025-04-13 23:16:53,550 - ERROR - Failed to load image from S3: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-04-13 23:16:53,550 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.23.57 PM.png
+2025-04-13 23:16:53,666 - ERROR - Failed to load image from S3: An error occurred (NoSuchKey) when calling the GetObject operation: The specified key does not exist.
+2025-04-13 23:16:53,667 - ERROR - Error: Could not read image Screenshot 2025-03-04 at 5.24.50 PM.png
+2025-04-13 23:16:53,820 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 23:16:53,820 - INFO - 
+Best method statistics:
+2025-04-13 23:16:53,820 - INFO - 
+Processed 5 images in 1.06 seconds
+2025-04-13 23:16:53,820 - INFO - Average time per image: 0.21 seconds
+2025-04-13 23:16:53,823 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 23:16:55,918 - INFO - 127.0.0.1 - - [13/Apr/2025 23:16:55] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 23:16:59,161 - INFO - 127.0.0.1 - - [13/Apr/2025 23:16:59] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 23:16:59,162 - INFO - 127.0.0.1 - - [13/Apr/2025 23:16:59] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 23:17:32,242 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 23:17:34,456 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 23:17:41,063 - WARNING -  * Debugger is active!
+2025-04-13 23:17:41,083 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 23:18:00,125 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 23:18:00,126 - INFO - OCR initialized with GPU support.
+2025-04-13 23:18:00,132 - INFO - Checking GPU status...
+2025-04-13 23:18:00,132 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 23:18:00,132 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 23:18:00,132 - INFO - Initializing EasyOCR reader...
+2025-04-13 23:18:00,133 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 23:18:02,234 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 23:18:02,326 - INFO - CUDA acceleration: Disabled
+2025-04-13 23:18:02,326 - INFO - Using 2 threads for parallel processing
+2025-04-13 23:18:02,351 - INFO - Found 1 brand folders in S3.
+2025-04-13 23:18:02,351 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 23:18:02,351 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 23:18:02,527 - INFO - Found 5 images in UWELL folder
+2025-04-13 23:18:02,527 - INFO - Using 1 threads and batch size of 5
+2025-04-13 23:18:02,527 - INFO - Processing batch 1/1
+2025-04-13 23:25:02,121 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 23:25:02,131 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-13 23:25:02,132 - INFO - 
+Best method statistics:
+2025-04-13 23:25:02,132 - INFO - clahe: 2 images (40.0%)
+2025-04-13 23:25:02,132 - INFO - original: 1 images (20.0%)
+2025-04-13 23:25:02,132 - INFO - binary: 1 images (20.0%)
+2025-04-13 23:25:02,132 - INFO - binary_mid_conf: 1 images (20.0%)
+2025-04-13 23:25:02,132 - INFO - 
+Processed 5 images in 419.78 seconds
+2025-04-13 23:25:02,132 - INFO - Average time per image: 83.96 seconds
+2025-04-13 23:25:02,133 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 23:25:04,270 - INFO - 127.0.0.1 - - [13/Apr/2025 23:25:04] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 23:25:08,041 - INFO - 127.0.0.1 - - [13/Apr/2025 23:25:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 23:25:08,042 - INFO - 127.0.0.1 - - [13/Apr/2025 23:25:08] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-13 23:27:54,323 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-13 23:27:56,908 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 23:28:03,743 - WARNING -  * Debugger is active!
+2025-04-13 23:28:03,763 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 23:36:53,254 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-13 23:36:55,566 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-13 23:37:02,247 - WARNING -  * Debugger is active!
+2025-04-13 23:37:02,266 - INFO -  * Debugger PIN: 316-045-193
+2025-04-13 23:37:23,862 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 23:37:23,863 - INFO - OCR initialized with GPU support.
+2025-04-13 23:37:23,863 - INFO - Checking GPU status...
+2025-04-13 23:37:23,863 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 23:37:23,863 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 23:37:23,863 - INFO - Initializing EasyOCR reader...
+2025-04-13 23:37:23,864 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 23:37:25,884 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 23:37:25,955 - INFO - CUDA acceleration: Disabled
+2025-04-13 23:37:25,956 - INFO - Using 2 threads for parallel processing
+2025-04-13 23:37:25,978 - INFO - Found 1 brand folders in S3.
+2025-04-13 23:37:25,978 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 23:37:25,978 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 23:37:26,118 - INFO - Found 5 images in UWELL folder
+2025-04-13 23:37:26,118 - INFO - Using 1 threads and batch size of 5
+2025-04-13 23:37:26,118 - INFO - Processing batch 1/1
+2025-04-13 23:40:43,778 - INFO - Optimal batch size for your GPU: 32
+2025-04-13 23:40:43,778 - INFO - OCR initialized with GPU support.
+2025-04-13 23:40:43,792 - INFO - Checking GPU status...
+2025-04-13 23:40:43,792 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-13 23:40:43,792 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-13 23:40:43,792 - INFO - Initializing EasyOCR reader...
+2025-04-13 23:40:43,792 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-13 23:40:46,841 - INFO - EasyOCR initialized successfully with CPU
+2025-04-13 23:40:47,284 - INFO - CUDA acceleration: Disabled
+2025-04-13 23:40:47,284 - INFO - Using 2 threads for parallel processing
+2025-04-13 23:40:47,372 - INFO - Found 1 brand folders in S3.
+2025-04-13 23:40:47,374 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-13 23:40:47,374 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-13 23:40:47,833 - INFO - Found 5 images in UWELL folder
+2025-04-13 23:40:47,833 - INFO - Using 1 threads and batch size of 5
+2025-04-13 23:40:47,833 - INFO - Processing batch 1/1
+2025-04-13 23:51:06,917 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 23:51:06,935 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-13 23:51:06,939 - INFO - 
+Best method statistics:
+2025-04-13 23:51:06,939 - INFO - clahe: 2 images (40.0%)
+2025-04-13 23:51:06,939 - INFO - original: 1 images (20.0%)
+2025-04-13 23:51:06,939 - INFO - binary: 1 images (20.0%)
+2025-04-13 23:51:06,939 - INFO - binary_mid_conf: 1 images (20.0%)
+2025-04-13 23:51:06,939 - INFO - 
+Processed 5 images in 820.96 seconds
+2025-04-13 23:51:06,939 - INFO - Average time per image: 164.19 seconds
+2025-04-13 23:51:06,941 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 23:51:07,982 - ERROR - Failed to load image from S3: cannot identify image file <_io.BytesIO object at 0x15da60180>
+2025-04-13 23:51:08,318 - INFO - 127.0.0.1 - - [13/Apr/2025 23:51:08] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 23:53:14,897 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-13 23:53:14,905 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-13 23:53:14,906 - INFO - 
+Best method statistics:
+2025-04-13 23:53:14,906 - INFO - clahe: 2 images (40.0%)
+2025-04-13 23:53:14,906 - INFO - original: 1 images (20.0%)
+2025-04-13 23:53:14,906 - INFO - binary: 1 images (20.0%)
+2025-04-13 23:53:14,906 - INFO - binary_mid_conf: 1 images (20.0%)
+2025-04-13 23:53:14,906 - INFO - 
+Processed 5 images in 747.53 seconds
+2025-04-13 23:53:14,906 - INFO - Average time per image: 149.51 seconds
+2025-04-13 23:53:14,907 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-13 23:53:15,306 - ERROR - Failed to load image from S3: cannot identify image file <_io.BytesIO object at 0x16c1cd8f0>
+2025-04-13 23:53:15,582 - INFO - 127.0.0.1 - - [13/Apr/2025 23:53:15] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-13 23:53:18,978 - INFO - 127.0.0.1 - - [13/Apr/2025 23:53:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-13 23:53:18,978 - INFO - 127.0.0.1 - - [13/Apr/2025 23:53:18] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-15 08:41:19,285 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 08:41:19,287 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 08:41:19,315 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 08:41:24,555 - WARNING -  * Debugger is active!
+2025-04-15 08:41:24,575 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 08:41:49,611 - INFO - 127.0.0.1 - - [15/Apr/2025 08:41:49] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-15 08:41:52,171 - INFO - 127.0.0.1 - - [15/Apr/2025 08:41:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 08:41:52,171 - INFO - 127.0.0.1 - - [15/Apr/2025 08:41:52] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-15 08:43:05,736 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 08:43:05,738 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-15 08:43:05,738 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/app.py', reloading
+2025-04-15 08:43:05,739 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-15 08:43:08,592 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 08:43:15,183 - WARNING -  * Debugger is active!
+2025-04-15 08:43:15,259 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 08:43:36,707 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/app.py', reloading
+2025-04-15 08:43:36,708 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-15 08:43:36,708 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 08:43:36,708 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/app.py', reloading
+2025-04-15 08:43:36,708 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-15 08:43:36,709 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 08:43:36,709 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-15 08:43:38,846 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 08:43:44,889 - WARNING -  * Debugger is active!
+2025-04-15 08:43:44,907 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 08:44:11,022 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/app.py', reloading
+2025-04-15 08:44:11,022 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 08:44:11,022 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-15 08:44:11,031 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/app.py', reloading
+2025-04-15 08:44:11,031 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 08:44:11,032 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-15 08:44:11,032 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-15 08:44:12,974 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 08:44:18,748 - WARNING -  * Debugger is active!
+2025-04-15 08:44:18,766 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 08:44:41,200 - INFO - Optimal batch size for your GPU: 32
+2025-04-15 08:44:41,201 - INFO - OCR initialized with GPU support.
+2025-04-15 08:44:41,202 - INFO - Checking GPU status...
+2025-04-15 08:44:41,202 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-15 08:44:41,202 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-15 08:44:41,202 - INFO - Initializing EasyOCR reader...
+2025-04-15 08:44:41,202 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-15 08:44:43,312 - INFO - EasyOCR initialized successfully with CPU
+2025-04-15 08:44:43,378 - INFO - CUDA acceleration: Disabled
+2025-04-15 08:44:43,378 - INFO - Using 2 threads for parallel processing
+2025-04-15 08:44:43,408 - INFO - Found 1 brand folders in S3.
+2025-04-15 08:44:43,408 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-15 08:44:43,408 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-15 08:44:43,605 - INFO - Found 5 images in UWELL folder
+2025-04-15 08:44:43,605 - INFO - Using 1 threads and batch size of 5
+2025-04-15 08:44:43,605 - INFO - Processing batch 1/1
+2025-04-15 09:00:31,692 - INFO - Optimal batch size for your GPU: 32
+2025-04-15 09:00:31,692 - INFO - OCR initialized with GPU support.
+2025-04-15 09:00:31,710 - INFO - Checking GPU status...
+2025-04-15 09:00:31,710 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-15 09:00:31,710 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-15 09:00:31,710 - INFO - Initializing EasyOCR reader...
+2025-04-15 09:00:31,710 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-15 09:00:36,388 - INFO - EasyOCR initialized successfully with CPU
+2025-04-15 09:00:36,559 - INFO - CUDA acceleration: Disabled
+2025-04-15 09:00:36,560 - INFO - Using 2 threads for parallel processing
+2025-04-15 09:00:36,586 - INFO - Found 1 brand folders in S3.
+2025-04-15 09:00:36,586 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-15 09:00:36,586 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-15 09:00:36,742 - INFO - Found 5 images in UWELL folder
+2025-04-15 09:00:36,742 - INFO - Using 1 threads and batch size of 5
+2025-04-15 09:00:36,742 - INFO - Processing batch 1/1
+2025-04-15 09:26:53,373 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 09:26:53,373 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 09:26:53,404 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 09:27:00,754 - WARNING -  * Debugger is active!
+2025-04-15 09:27:00,843 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 09:27:13,295 - INFO - Optimal batch size for your GPU: 32
+2025-04-15 09:27:13,296 - INFO - OCR initialized with GPU support.
+2025-04-15 09:27:13,296 - INFO - Checking GPU status...
+2025-04-15 09:27:13,297 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-15 09:27:13,297 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-15 09:27:13,297 - INFO - Initializing EasyOCR reader...
+2025-04-15 09:27:13,297 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-15 09:27:15,380 - INFO - EasyOCR initialized successfully with CPU
+2025-04-15 09:27:15,439 - INFO - CUDA acceleration: Disabled
+2025-04-15 09:27:15,439 - INFO - Using 2 threads for parallel processing
+2025-04-15 09:27:15,460 - INFO - Found 1 brand folders in S3.
+2025-04-15 09:27:15,461 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-15 09:27:15,461 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-15 09:27:15,607 - INFO - Found 2 images in UWELL folder
+2025-04-15 09:27:15,607 - INFO - Using 1 threads and batch size of 2
+2025-04-15 09:27:15,607 - INFO - Processing batch 1/1
+2025-04-15 09:28:01,063 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-15 09:28:01,068 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-15 09:28:01,068 - INFO - 
+Best method statistics:
+2025-04-15 09:28:01,068 - INFO - original: 1 images (50.0%)
+2025-04-15 09:28:01,069 - INFO - binary_mid_conf: 1 images (50.0%)
+2025-04-15 09:28:01,069 - INFO - 
+Processed 2 images in 45.61 seconds
+2025-04-15 09:28:01,069 - INFO - Average time per image: 22.80 seconds
+2025-04-15 09:28:01,069 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-15 09:28:01,617 - ERROR - Failed to load image from S3: cannot identify image file <_io.BytesIO object at 0x3216442c0>
+2025-04-15 09:28:01,934 - INFO - 127.0.0.1 - - [15/Apr/2025 09:28:01] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-15 09:28:05,107 - INFO - 127.0.0.1 - - [15/Apr/2025 09:28:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:28:05,108 - INFO - 127.0.0.1 - - [15/Apr/2025 09:28:05] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-15 09:35:31,154 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-15 09:35:31,157 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-15 09:35:34,093 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 09:35:41,735 - WARNING -  * Debugger is active!
+2025-04-15 09:35:41,755 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 09:36:00,623 - INFO - Optimal batch size for your GPU: 32
+2025-04-15 09:36:00,623 - INFO - OCR initialized with GPU support.
+2025-04-15 09:36:00,624 - INFO - Checking GPU status...
+2025-04-15 09:36:00,624 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-15 09:36:00,624 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-15 09:36:00,624 - INFO - Initializing EasyOCR reader...
+2025-04-15 09:36:00,624 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-15 09:36:03,597 - INFO - EasyOCR initialized successfully with CPU
+2025-04-15 09:36:03,663 - INFO - CUDA acceleration: Disabled
+2025-04-15 09:36:03,664 - INFO - Using 2 threads for parallel processing
+2025-04-15 09:36:03,688 - INFO - Found 1 brand folders in S3.
+2025-04-15 09:36:03,688 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-15 09:36:03,688 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-15 09:36:03,862 - INFO - Found 2 images in UWELL folder
+2025-04-15 09:36:03,862 - INFO - Using 1 threads and batch size of 2
+2025-04-15 09:36:03,862 - INFO - Processing batch 1/1
+2025-04-15 09:36:51,147 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-15 09:36:51,151 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-15 09:36:51,151 - INFO - 
+Best method statistics:
+2025-04-15 09:36:51,151 - INFO - original: 1 images (50.0%)
+2025-04-15 09:36:51,151 - INFO - binary_mid_conf: 1 images (50.0%)
+2025-04-15 09:36:51,151 - INFO - 
+Processed 2 images in 47.46 seconds
+2025-04-15 09:36:51,151 - INFO - Average time per image: 23.73 seconds
+2025-04-15 09:36:51,152 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-15 09:36:51,668 - ERROR - Failed to load image from S3: cannot identify image file <_io.BytesIO object at 0x353f7bfb0>
+2025-04-15 09:36:51,936 - INFO - 127.0.0.1 - - [15/Apr/2025 09:36:51] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-15 09:36:55,191 - INFO - 127.0.0.1 - - [15/Apr/2025 09:36:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:36:55,191 - INFO - 127.0.0.1 - - [15/Apr/2025 09:36:55] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-15 09:40:50,314 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/easy_ocr.py', reloading
+2025-04-15 09:40:52,826 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 09:41:00,271 - WARNING -  * Debugger is active!
+2025-04-15 09:41:00,286 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 09:41:11,724 - INFO - Optimal batch size for your GPU: 32
+2025-04-15 09:41:11,725 - INFO - OCR initialized with GPU support.
+2025-04-15 09:41:11,727 - INFO - Checking GPU status...
+2025-04-15 09:41:11,727 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-15 09:41:11,727 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-15 09:41:11,727 - INFO - Initializing EasyOCR reader...
+2025-04-15 09:41:11,727 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-15 09:41:13,762 - INFO - EasyOCR initialized successfully with CPU
+2025-04-15 09:41:13,845 - INFO - CUDA acceleration: Disabled
+2025-04-15 09:41:13,846 - INFO - Using 2 threads for parallel processing
+2025-04-15 09:41:13,866 - INFO - Found 1 brand folders in S3.
+2025-04-15 09:41:13,866 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-15 09:41:13,866 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-15 09:41:14,006 - INFO - Found 2 images in UWELL folder
+2025-04-15 09:41:14,006 - INFO - Using 1 threads and batch size of 2
+2025-04-15 09:41:14,006 - INFO - Processing batch 1/1
+2025-04-15 09:41:58,351 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-15 09:41:58,352 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-15 09:41:58,353 - INFO - 
+Best method statistics:
+2025-04-15 09:41:58,353 - INFO - original: 1 images (50.0%)
+2025-04-15 09:41:58,353 - INFO - binary_mid_conf: 1 images (50.0%)
+2025-04-15 09:41:58,353 - INFO - 
+Processed 2 images in 44.49 seconds
+2025-04-15 09:41:58,353 - INFO - Average time per image: 22.24 seconds
+2025-04-15 09:41:58,354 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-15 09:41:58,648 - INFO - 127.0.0.1 - - [15/Apr/2025 09:41:58] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-15 09:42:01,659 - INFO - 127.0.0.1 - - [15/Apr/2025 09:42:01] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-15 09:42:01,659 - INFO - 127.0.0.1 - - [15/Apr/2025 09:42:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:43:25,149 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 09:43:27,461 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 09:43:34,401 - WARNING -  * Debugger is active!
+2025-04-15 09:43:34,420 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 09:44:03,712 - INFO - Optimal batch size for your GPU: 32
+2025-04-15 09:44:03,712 - INFO - OCR initialized with GPU support.
+2025-04-15 09:44:03,713 - INFO - Checking GPU status...
+2025-04-15 09:44:03,713 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-15 09:44:03,713 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-15 09:44:03,713 - INFO - Initializing EasyOCR reader...
+2025-04-15 09:44:03,713 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-15 09:44:05,688 - INFO - EasyOCR initialized successfully with CPU
+2025-04-15 09:44:05,759 - INFO - CUDA acceleration: Disabled
+2025-04-15 09:44:05,759 - INFO - Using 2 threads for parallel processing
+2025-04-15 09:44:05,787 - INFO - Found 1 brand folders in S3.
+2025-04-15 09:44:05,787 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-15 09:44:05,787 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-15 09:44:05,935 - INFO - Found 2 images in UWELL folder
+2025-04-15 09:44:05,935 - INFO - Using 1 threads and batch size of 2
+2025-04-15 09:44:05,935 - INFO - Processing batch 1/1
+2025-04-15 09:44:49,282 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-15 09:44:49,287 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-15 09:44:49,287 - INFO - 
+Best method statistics:
+2025-04-15 09:44:49,288 - INFO - original: 1 images (50.0%)
+2025-04-15 09:44:49,288 - INFO - binary_mid_conf: 1 images (50.0%)
+2025-04-15 09:44:49,288 - INFO - 
+Processed 2 images in 43.50 seconds
+2025-04-15 09:44:49,288 - INFO - Average time per image: 21.75 seconds
+2025-04-15 09:44:49,288 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-15 09:44:49,529 - INFO - 127.0.0.1 - - [15/Apr/2025 09:44:49] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-15 09:44:52,401 - INFO - 127.0.0.1 - - [15/Apr/2025 09:44:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:44:52,401 - INFO - 127.0.0.1 - - [15/Apr/2025 09:44:52] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-15 09:45:24,678 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/ocr_csv_eda.py', reloading
+2025-04-15 09:45:27,131 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 09:45:33,973 - WARNING -  * Debugger is active!
+2025-04-15 09:45:33,993 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 09:46:02,268 - INFO - Optimal batch size for your GPU: 32
+2025-04-15 09:46:02,268 - INFO - OCR initialized with GPU support.
+2025-04-15 09:46:02,269 - INFO - Checking GPU status...
+2025-04-15 09:46:02,269 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-15 09:46:02,269 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-15 09:46:02,269 - INFO - Initializing EasyOCR reader...
+2025-04-15 09:46:02,269 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-15 09:46:04,220 - INFO - EasyOCR initialized successfully with CPU
+2025-04-15 09:46:04,297 - INFO - CUDA acceleration: Disabled
+2025-04-15 09:46:04,297 - INFO - Using 2 threads for parallel processing
+2025-04-15 09:46:04,324 - INFO - Found 1 brand folders in S3.
+2025-04-15 09:46:04,324 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-15 09:46:04,324 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-15 09:46:04,454 - INFO - Found 2 images in UWELL folder
+2025-04-15 09:46:04,454 - INFO - Using 1 threads and batch size of 2
+2025-04-15 09:46:04,454 - INFO - Processing batch 1/1
+2025-04-15 09:46:53,337 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-15 09:46:53,342 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-15 09:46:53,343 - INFO - 
+Best method statistics:
+2025-04-15 09:46:53,343 - INFO - original: 1 images (50.0%)
+2025-04-15 09:46:53,343 - INFO - binary_mid_conf: 1 images (50.0%)
+2025-04-15 09:46:53,343 - INFO - 
+Processed 2 images in 49.02 seconds
+2025-04-15 09:46:53,343 - INFO - Average time per image: 24.51 seconds
+2025-04-15 09:46:53,343 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-15 09:46:53,663 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:53] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-15 09:46:57,151 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:46:57,151 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:57] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-15 09:48:20,661 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/ocr_csv_eda.py', reloading
+2025-04-15 09:48:23,172 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 09:48:30,654 - WARNING -  * Debugger is active!
+2025-04-15 09:48:30,672 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 09:48:58,941 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 09:48:58,948 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 09:49:01,098 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 09:49:06,762 - WARNING -  * Debugger is active!
+2025-04-15 09:49:06,778 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 09:49:23,414 - INFO - Optimal batch size for your GPU: 32
+2025-04-15 09:49:23,415 - INFO - OCR initialized with GPU support.
+2025-04-15 09:49:23,417 - INFO - Checking GPU status...
+2025-04-15 09:49:23,417 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-15 09:49:23,417 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-15 09:49:23,417 - INFO - Initializing EasyOCR reader...
+2025-04-15 09:49:23,417 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-15 09:49:25,598 - INFO - EasyOCR initialized successfully with CPU
+2025-04-15 09:49:25,685 - INFO - CUDA acceleration: Disabled
+2025-04-15 09:49:25,685 - INFO - Using 2 threads for parallel processing
+2025-04-15 09:49:25,711 - INFO - Found 1 brand folders in S3.
+2025-04-15 09:49:25,711 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-15 09:49:25,711 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-15 09:49:25,877 - INFO - Found 2 images in UWELL folder
+2025-04-15 09:49:25,877 - INFO - Using 1 threads and batch size of 2
+2025-04-15 09:49:25,877 - INFO - Processing batch 1/1
+2025-04-15 09:50:13,616 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-15 09:50:13,621 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-15 09:50:13,622 - INFO - 
+Best method statistics:
+2025-04-15 09:50:13,622 - INFO - original: 1 images (50.0%)
+2025-04-15 09:50:13,622 - INFO - binary_mid_conf: 1 images (50.0%)
+2025-04-15 09:50:13,622 - INFO - 
+Processed 2 images in 47.91 seconds
+2025-04-15 09:50:13,622 - INFO - Average time per image: 23.96 seconds
+2025-04-15 09:50:13,623 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-15 09:50:14,098 - INFO - 127.0.0.1 - - [15/Apr/2025 09:50:14] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-15 09:50:17,587 - INFO - 127.0.0.1 - - [15/Apr/2025 09:50:17] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-15 09:50:17,587 - INFO - 127.0.0.1 - - [15/Apr/2025 09:50:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:54:35,904 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/app.py', reloading
+2025-04-15 09:54:38,597 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 09:54:46,546 - WARNING -  * Debugger is active!
+2025-04-15 09:54:46,565 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 09:56:52,095 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-15 09:56:52,097 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 09:56:52,098 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/Labeling.py', reloading
+2025-04-15 09:56:52,098 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-15 09:56:52,098 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 09:56:54,709 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 09:57:03,123 - WARNING -  * Debugger is active!
+2025-04-15 09:57:03,141 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 10:00:38,738 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 10:00:41,158 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 10:00:48,758 - WARNING -  * Debugger is active!
+2025-04-15 10:00:48,819 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 10:01:23,317 - INFO - Optimal batch size for your GPU: 32
+2025-04-15 10:01:23,317 - INFO - OCR initialized with GPU support.
+2025-04-15 10:01:23,318 - INFO - Checking GPU status...
+2025-04-15 10:01:23,318 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-15 10:01:23,318 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-15 10:01:23,318 - INFO - Initializing EasyOCR reader...
+2025-04-15 10:01:23,319 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-15 10:01:25,514 - INFO - EasyOCR initialized successfully with CPU
+2025-04-15 10:01:25,596 - INFO - CUDA acceleration: Disabled
+2025-04-15 10:01:25,596 - INFO - Using 2 threads for parallel processing
+2025-04-15 10:01:25,617 - INFO - Found 1 brand folders in S3.
+2025-04-15 10:01:25,617 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-15 10:01:25,617 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-15 10:01:25,775 - INFO - Found 2 images in UWELL folder
+2025-04-15 10:01:25,775 - INFO - Using 1 threads and batch size of 2
+2025-04-15 10:01:25,775 - INFO - Processing batch 1/1
+2025-04-15 10:01:53,632 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 10:01:53,634 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/Labeling.py', reloading
+2025-04-15 10:01:53,634 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/EDA.py', reloading
+2025-04-15 10:01:53,640 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 10:02:13,941 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-15 10:02:13,946 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-15 10:02:15,272 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 10:02:22,610 - WARNING -  * Debugger is active!
+2025-04-15 10:02:22,630 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 10:02:53,074 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 10:02:53,074 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 10:02:53,079 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 10:02:58,970 - WARNING -  * Debugger is active!
+2025-04-15 10:02:58,989 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 10:05:06,313 - INFO - 127.0.0.1 - - [15/Apr/2025 10:05:06] "GET / HTTP/1.1" 200 -
+2025-04-15 10:05:08,449 - INFO - 127.0.0.1 - - [15/Apr/2025 10:05:08] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 10:05:08,458 - INFO - 127.0.0.1 - - [15/Apr/2025 10:05:08] "GET /static/BannerImage.png HTTP/1.1" 200 -
+2025-04-15 10:05:12,732 - INFO - 127.0.0.1 - - [15/Apr/2025 10:05:12] "GET /dashboard HTTP/1.1" 200 -
+2025-04-15 10:05:14,252 - INFO - 127.0.0.1 - - [15/Apr/2025 10:05:14] "GET /visualization_images/Distribution_of_Brightness_Levels.png HTTP/1.1" 200 -
+2025-04-15 10:05:14,253 - INFO - 127.0.0.1 - - [15/Apr/2025 10:05:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 10:05:23,964 - INFO - Optimal batch size for your GPU: 32
+2025-04-15 10:05:23,965 - INFO - OCR initialized with GPU support.
+2025-04-15 10:05:23,965 - INFO - Checking GPU status...
+2025-04-15 10:05:23,965 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-15 10:05:23,965 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-15 10:05:23,965 - INFO - Initializing EasyOCR reader...
+2025-04-15 10:05:23,965 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-15 10:05:26,004 - INFO - EasyOCR initialized successfully with CPU
+2025-04-15 10:05:26,065 - INFO - CUDA acceleration: Disabled
+2025-04-15 10:05:26,065 - INFO - Using 2 threads for parallel processing
+2025-04-15 10:05:26,091 - INFO - Found 1 brand folders in S3.
+2025-04-15 10:05:26,092 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-15 10:05:26,092 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-15 10:05:26,244 - INFO - Found 2 images in UWELL folder
+2025-04-15 10:05:26,244 - INFO - Using 1 threads and batch size of 2
+2025-04-15 10:05:26,244 - INFO - Processing batch 1/1
+2025-04-15 10:06:10,158 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-15 10:06:10,161 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-15 10:06:10,161 - INFO - 
+Best method statistics:
+2025-04-15 10:06:10,161 - INFO - original: 1 images (50.0%)
+2025-04-15 10:06:10,161 - INFO - binary_mid_conf: 1 images (50.0%)
+2025-04-15 10:06:10,161 - INFO - 
+Processed 2 images in 44.07 seconds
+2025-04-15 10:06:10,161 - INFO - Average time per image: 22.03 seconds
+2025-04-15 10:06:10,162 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-15 10:06:10,574 - INFO - 127.0.0.1 - - [15/Apr/2025 10:06:10] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-15 10:06:13,486 - INFO - 127.0.0.1 - - [15/Apr/2025 10:06:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 10:06:13,487 - INFO - 127.0.0.1 - - [15/Apr/2025 10:06:13] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-15 10:11:43,302 - INFO -  * Detected change in '/Users/mayankgrover/Documents/DAEN_698/VapeWatchers/Application/models/image_processing.py', reloading
+2025-04-15 10:11:45,949 - INFO -  * Restarting with watchdog (fsevents)
+2025-04-15 10:11:53,698 - WARNING -  * Debugger is active!
+2025-04-15 10:11:53,786 - INFO -  * Debugger PIN: 316-045-193
+2025-04-15 10:13:28,309 - INFO - Optimal batch size for your GPU: 32
+2025-04-15 10:13:28,309 - INFO - OCR initialized with GPU support.
+2025-04-15 10:13:28,311 - INFO - Checking GPU status...
+2025-04-15 10:13:28,311 - ERROR - No CUDA GPU detected! Make sure PyTorch is properly installed with CUDA support.
+2025-04-15 10:13:28,311 - WARNING - CUDA not available. Proceeding with CPU inference.
+2025-04-15 10:13:28,311 - INFO - Initializing EasyOCR reader...
+2025-04-15 10:13:28,311 - WARNING - Using CPU. Note: This module is much faster with a GPU.
+2025-04-15 10:13:30,371 - INFO - EasyOCR initialized successfully with CPU
+2025-04-15 10:13:30,428 - INFO - CUDA acceleration: Disabled
+2025-04-15 10:13:30,428 - INFO - Using 2 threads for parallel processing
+2025-04-15 10:13:30,456 - INFO - Found 1 brand folders in S3.
+2025-04-15 10:13:30,457 - INFO - Found 1 brand folders: ['UWELL']
+2025-04-15 10:13:30,457 - INFO - 
+Processing brand 1/1: UWELL
+2025-04-15 10:13:30,607 - INFO - Found 2 images in UWELL folder
+2025-04-15 10:13:30,607 - INFO - Using 1 threads and batch size of 2
+2025-04-15 10:13:30,607 - INFO - Processing batch 1/1
+2025-04-15 10:14:16,130 - INFO - GPU memory: 0.0MB / 0.0MB
+2025-04-15 10:14:16,132 - INFO - Saved intermediate results for UWELL to output/UWELL_results.csv
+2025-04-15 10:14:16,133 - INFO - 
+Best method statistics:
+2025-04-15 10:14:16,133 - INFO - original: 1 images (50.0%)
+2025-04-15 10:14:16,133 - INFO - binary_mid_conf: 1 images (50.0%)
+2025-04-15 10:14:16,133 - INFO - 
+Processed 2 images in 45.68 seconds
+2025-04-15 10:14:16,133 - INFO - Average time per image: 22.84 seconds
+2025-04-15 10:14:16,134 - INFO - Saved complete results to output/vape_ocr_results.csv and output/vape_ocr_results.pkl
+2025-04-15 10:14:16,744 - INFO - 127.0.0.1 - - [15/Apr/2025 10:14:16] "GET /generate-csv HTTP/1.1" 200 -
+2025-04-15 10:14:19,880 - INFO - 127.0.0.1 - - [15/Apr/2025 10:14:19] "[36mGET /static/BannerImage.png HTTP/1.1[0m" 304 -
+2025-04-15 10:14:19,880 - INFO - 127.0.0.1 - - [15/Apr/2025 10:14:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

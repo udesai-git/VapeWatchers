@@ -10,10 +10,9 @@ from io import BytesIO
 app = Flask(__name__)
 
 
-AWS_ACCESS_KEY="ASIARMWYWT5WXMIH756U"
-AWS_SECRET_KEY="HxmXPjM255nectVrgPIusFgiJgOHCYeC1YFnJrfP"
-aws_session_token="IQoJb3JpZ2luX2VjEPH//////////wEaCXVzLXdlc3QtMiJHMEUCIF0oIvMP4z8Tk7CVEEZ95fJVHpo3Ph5xWtERLDDBN13MAiEAy29ggiROBkDp7gs6VAz3HiTcqT3Uq6cHvLGgp+nw/E4qqgIIahABGgwwOTYwMTc0ODk3NzMiDBL4sfBBqi9YNSyHVSqHAg+d/H2bLQJd6XfuIC59iSDbcQIAViVnG8c5PgNqy2iXY/KF2ec8UoJMcb3FIxMVrKWZV1hhf3Cekn5d2lA/simQkRYoBvkQokhILQRSPWVJ7xkUJGsISqusTrd63cwcRVLocpt2dHL7sEYvQ3vFtfsWlqehyI6InimfQ0sSGHStqczJeaU3ZHLcG1uOa70xdLZavWYiHbOCK9KqqA/fRczBPc6ktGIng9j4cckGxfmwLG1baiC5FIJiVpGbGOMVFa5IrCOEZsEXvNcE56OPAlTgR3x5SCJGwknVwErkQSnHPd7yFybBMXAmQMD1dA34ZSTNpIyWG9ZIUpN+qh4C9drRV4OIf5CBMLja0b8GOp0B8qr4Gn9wNJQiBqA1OWjxq2Hz77yit0M5yBkI2HKmM72/JpnIlJR+i9QQ31F13jNxMiAL0AXCBuoTyj8QiC+JEa/1/ucaQTiIcFNsn2npOJQ1q/G5yHMQMAau2oeEzs1CA3/s1J4XzY6r9CgRZBV8X103yvY0vh7SIj1GE7ku57zYsByVBTFGD/qvm+gj8W5ZKEHJSsV0dqoiDds7AA=="
-
+AWS_ACCESS_KEY="ASIARMWYWT5W52CZXXBI"
+AWS_SECRET_KEY="c9orzaCeF8NsHy+pITmG3gYk3knbRELOTTtT7+4X"
+aws_session_token="IQoJb3JpZ2luX2VjEKX//////////wEaCXVzLXdlc3QtMiJHMEUCIQCj0tLOhKjnDfCY5Ml6tLpDdDf1Es92KFu/toW1dJ1VnQIgY/tru9CTU9edVaqZzUOR9s5o3piJ3MlZCwekL8MvqX4qqgIILhABGgwwOTYwMTc0ODk3NzMiDB+v1RCHfTDeHYzJOyqHAqVuxYR4tNpwlKeEOT8aKNGQCGqPudL0QLfJtYrZftffi7EtYGVhtU2UCUaK1niZFY+ckpkCDVZsXyPtLxGdVZofkbyV12rEHwF/rCRmh8IKGCxS+PNnwj4bPeJbIsHrrSVyYKRV3NhoqDDESLMOdczgA3TcknuAmgxR6tUBt7e/4hEXPl5LatB844kd8g7i9fmMS4gwOE+6J918OhiWvuhzL7IlfQ3vRgcEGCoQL46PkuqGjfM0zI0EPVMtWDB1bD377L4kSoQ5KjrjREF5ZAaQD+Uq2pw3/lb3F5ZnPmYVELqnUd1h1Ytki4JXgodah7mprUFezUi/gte3klabqRcz1xdg6E9oMJ+l+b8GOp0Bugt5jI36GV6EC/zRUR1qOXK/a4dZns++0e81jPhn9kCY6Hk2flAlpdZDyKtQBrWX7Uzc8f0z96PtJF8BoEJjESlM48POZHofuAY+ap5ib4XnqN2dDO3IrTLjNQWLyr0+WLVA9oc6UNA9zRARKTfqQNpefdyx5+G99levH8OFp/GinVwV/HR7A+SWiVS2B+UGkUvbXhT5cFUu4LP0rw=="
 
 s3_session = boto3.Session(
     aws_access_key_id=AWS_ACCESS_KEY,
@@ -30,13 +29,14 @@ def home():
 @app.route("/generate-csv", methods=["GET"])
 def generate_csv():
     try:
-        print("📝 Starting CSV generation...")  # Debugging line to check if the route is being hit
-        analyze_and_save_results(s3_bucket_name='vapewatchers-2025', prefix='MarketingImages/')  # or whatever your prefix is
-        message = "✅ CSV successfully generated and saved to S3!"
+        print("📝 Starting CSV generation...")
+        analyze_and_save_results(s3_bucket_name='vapewatchers-2025', prefix='MarketingImages/')
+        
+        message = "CSV successfully generated and saved to S3!"
         message_class = "success"
     except Exception as e:
-        print(f"❌ Error generating CSV: {str(e)}")  # Log error to console
-        message = f"❌ Error generating CSV: {str(e)}"
+        print(f"Error generating CSV: {str(e)}")  # Log error to console
+        message = f"Error generating CSV: {str(e)}"
         message_class = "error"
 
     print(f"Message: {message}")  # Debugging message to print the result
