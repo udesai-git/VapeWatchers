@@ -8,3 +8,8 @@ nltk
 scikit-learn
 textstat
 emoji
+requests
+beautifulsoup4
+scrapy
+Pillow
+kaleido

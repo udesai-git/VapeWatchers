@@ -12,25 +12,36 @@ import boto3
 from io import BytesIO
 from models.easy_ocr import main as easy_ocr_main
 from models.ocr_csv_eda import main as ocr_analysis_main
+import requests
 
 
 # Load models
 AGE_LIST = ['(0-2)', '(4-6)', '(8-13)', '(15-20)', '(25-32)', '(38-43)', '(48-53)', '(60-100)']
-prototxt_path = "/Users/mayankgrover/Documents/DAEN_698/Vape_Regulation_Project/models/deploy_age.prototxt"
-model_path = "/Users/mayankgrover/Documents/DAEN_698/Vape_Regulation_Project/models/age_net.caffemodel"
-age_model = cv2.dnn.readNetFromCaffe(prototxt_path, model_path)
 
-cartoon_model = YOLO('/Users/mayankgrover/Documents/DAEN_698/Vape_Regulation_Project/models/yolov8_trained.pt')
-vape_model = YOLO('/Users/mayankgrover/Documents/DAEN_698/Vape_Regulation_Project/models/best.pt')
+# Get the absolute path to the directory where this script is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Build full paths
+prototxt_path = os.path.join(BASE_DIR, 'deploy_age.prototxt')
+model_path = os.path.join(BASE_DIR, 'age_net.caffemodel')
+
+# For YOLO models
+cartoon_model_path = os.path.join(BASE_DIR, 'cartoon_yolov8_trained.pt')
+vape_model_path = os.path.join(BASE_DIR, 'best.pt')
+
+# Load models
+age_model = cv2.dnn.readNetFromCaffe(prototxt_path, model_path)
+cartoon_model = YOLO(cartoon_model_path)
+vape_model = YOLO(vape_model_path)
 
 
 print("🔄 Starting image processing...")
 data = []
 
 
-AWS_ACCESS_KEY="ASIARMWYWT5WXYNUMKHG"
-AWS_SECRET_KEY="tUqiukQ0s+o9YsEojE439lqLjKazPFU5nNpMbytT"
-aws_session_token="IQoJb3JpZ2luX2VjEK3//////////wEaCXVzLXdlc3QtMiJHMEUCIQDjpsflsXN4BbzYbCa/3IMXBZGBJKKlMcwdTGPgmSA+NgIgX17Xv6CjafvLNSXmEuCIaQapdsCGYcDCTwosCTbbii4qqgIINhABGgwwOTYwMTc0ODk3NzMiDDpPPv8eXe1kFtJcPSqHAr3DNsIY6tHlZl0DOIbfmxUeVNn/nDWJ/yrZVfT2uIoTDW5a3bTQYAKZsqIxYqFiuk5yPfbzN6BvcG9ycTsGOLSMstqNAPRxRnbPm3Q1Qx4Dau9Vt+lenk2zUDEn76RfRQ2w4LUuKD1Mdkr7gh09D9zJuC5Yj5EAIH5bYiDXSryCfKSfREEsna4ai2OICTXQsRpBBIMZ9YmjoWiPmqbNJFeGvM4z/ICdJPvW/ue9rNOOz6cdiRubMZKuNIYbVf3QC66xNN7SWCOgi02+hCmLkhbB9QTeWj1WSH4R1QKv40XaG396SrdpxmBucwirN/Q1sttWEOd8eFB1SrEuTndzLhYKk7lekKcbMOWL+78GOp0BvUebS/IYdGCA7f6Jo8fsxUILk1ZwYghC87SG8pGYrc72mWUCqCO38b4O+DGt5vh3kidV12Amb5iBRivXLNbmfIdI6ECS4b0RlyL1h1flYDaX/XfbFFIY9DkpN7Ign0IszHRF9hKuYfU3MEZ5tvf5z89hjxcXiF2AjATMVFMw1zsUsKZ8Kr9+WwrsiDM/86fF09m16Co5XOQqdfRRCw=="
+AWS_ACCESS_KEY="ASIARMWYWT5W4G62QMRW"
+AWS_SECRET_KEY="8w5emt1huSBPI0jZvKkrSeJNw7HAt6IUqpa6Y9SA"
+aws_session_token="IQoJb3JpZ2luX2VjEKX//////////wEaCXVzLXdlc3QtMiJGMEQCIH6fYeZ14g7dwA667SRa5BjnQCkV9HcgDKlxKqWhyviWAiATwEUcW8i/BSZq5wtKzRXnjykmMmgtAR8n3YYvt9L4dCqqAgg+EAEaDDA5NjAxNzQ4OTc3MyIM0aYJScB/NK0JTq90KocCsKBrGvhph8iiTtC/0q+NVdcWEjEF+lj9dm/3dy4oAggHLmFq27znUgynfdPn+jsC3ciqwcDJ8r7M0lQMPMurycSJFTGp5tVf2Z64ymopLazKjSEQv4G47pMq2YPWQg5fa5QG259RdYfG6GrFgaQSXyzSo1xz5IdbSvHI0Ru18iub+1tR6VRWVnxk/nHA+iUEi7/XTLCcnknPKqbXKsj3hwQ8vS9/1WJtYlOQuRNEXD6bUYDl+W99IVwJCXIbtPuxC+k6kyTN2bU2S/DeiiHHh/vpH+zWT/vwwd7bPDSdMFL9chmxcbuo/jc0SiSZCn9Zgb9sHB0HfHXGH2F8NTSbxqAT9t5HY24wh86xwAY6ngGATfjHS3KeYHORnf7Soh+bjrIUaCVxRyVznOsq6jzNZqwTxmwP4E9/zvnfzxDdrC0bOll8kHeCqzDpaPIKE0hW9LRmCFiKXyDUDLEjkkson9zN9exp2y6e3jBF4JST3PLijtTVC/NqtBuVvqyqyxsU4LvFcpWOINdgomPBVcZEnyBNTtO/EUKZIPYbZ8XVRMCHxJgjcdpCzh/oDC7m/w=="
 
 
 s3_session = boto3.Session(
@@ -42,7 +53,7 @@ s3_session = boto3.Session(
 s3_client = s3_session.client('s3')
 
 bucket_name = 'vapewatchers-2025'
-prefix = 'MarketingImages/'
+prefix = 'MarketingImagesTest/'
 
 from scipy.spatial import distance
 
@@ -195,8 +206,8 @@ def get_img_avg_brightness(image_input):
 
 def get_company_name(image_path):
     path_parts = image_path.split('/')
-    if "MarketingImages" in path_parts:
-        idx = path_parts.index("MarketingImages")
+    if "MarketingImagesTest" in path_parts:
+        idx = path_parts.index("MarketingImagesTest")
         if idx + 1 < len(path_parts):
             return path_parts[idx + 1]
     return "Unknown"
@@ -235,50 +246,38 @@ def detect_vape_type(img):
     return best_vape if best_vape else "None"
 
 def label_data(row):
+    # Hard flags
+    if row.get('Cartoon') == 'Yes':
+        return 1
+
+    if row.get('Face') == 'Yes' and row.get('Age') in ['(0-2)', '(4-6)', '(8-13)', '(15-20)', '(25-32)']:
+        return 1
+
     score = 0
 
-    # -------------------------
-    # Image-based cues with weights
-    # -------------------------
-    if row['Face'] == 1 and row['Age'] in ['(0-2)', '(4-6)', '(8-13)', '(15-20)', '(25-32)']:
-        score += 2  # young face detected
-
-    if row['Cartoon'] == 1:
-        score += 2  # cartoon is a strong youth indicator
-
-    if row['Brightness_Level'] > 5:
-        score += 1  # brighter images may appeal to younger viewers
-
-    if row['Dominant_COLOR'] in [
+    # Relaxed visual cues
+    if row.get('Brightness_Level', 0) > 5:
+        score += 1
+    if row.get('Dominant_COLOR') in [
         'Red', 'Orange', 'Yellow',
         'Bright Red', 'Bright Orange', 'Bright Yellow',
         'Neon Red', 'Neon Orange', 'Neon Yellow',
         'Hot Pink', 'Fuchsia', 'Bright Pink'
     ]:
-        score += 1.5  # attention-grabbing colors
+        score += 1
 
-    # -------------------------
-    # Text-based cues with weights
-    # -------------------------
+    # Text cues with slightly more weight
     if row.get('youth_appeal_score', 0) > 0.5:
-        score += 2  # directly models youth-oriented language
-
+        score += 1.5
     if row.get('readability_youth_score', 0) > 0.5:
-        score += 1  # simple language
-
+        score += 1
     if row.get('special_chars_youth_score', 0) > 0.5:
-        score += 1  # emojis, hashtags, etc.
-
+        score += 1
     if row.get('contains_warning', 1) == 0 and row.get('Vape_Type', 'N/A') not in [None, '', 'N/A']:
-        score += 2  # high alert: vape mentioned but no warning
+        score += 1
 
-    # -------------------------
-    # Final decision based on score
-    # -------------------------
-    if score >= 3:
-        return 1
-    else:
-        return 0
+    return 1 if score >= 2 else 0
+
 
     
 def analyze_and_save_results(s3_bucket_name, prefix):
@@ -294,7 +293,7 @@ def analyze_and_save_results(s3_bucket_name, prefix):
 
         response = s3_client.list_objects_v2(**list_kwargs)
         if "Contents" not in response:
-            print(f"❌ No files found in {prefix} on bucket {s3_bucket_name}")
+            print(f"   No files found in {prefix} on bucket {s3_bucket_name}")
             break
 
         for obj in response["Contents"]:
@@ -302,7 +301,7 @@ def analyze_and_save_results(s3_bucket_name, prefix):
             if not image_path.lower().endswith((".png", ".jpg", ".jpeg")):
                 continue  # Skip non-image files
 
-            print(f"📌 Processing: {image_path}")
+            print(f" Processing: {image_path}")
 
             try:
                 brand_name = image_path.split("/")[1]
@@ -312,7 +311,7 @@ def analyze_and_save_results(s3_bucket_name, prefix):
                 image_array = np.asarray(bytearray(img_data), dtype=np.uint8)
                 img = cv2.imdecode(image_array, cv2.IMREAD_COLOR)
                 if img is None:
-                    print(f"❌ Error loading image: {image_path}")
+                    print(f"Error loading image: {image_path}")
                     continue
 
                 age_results = detect_age_with_mtcnn(img)
@@ -336,7 +335,7 @@ def analyze_and_save_results(s3_bucket_name, prefix):
                 })
 
             except Exception as e:
-                print(f"❌ Error processing {image_path}: {e}")
+                print(f"Error processing {image_path}: {e}")
                 continue
 
         # Check if there are more objects to list
@@ -353,14 +352,13 @@ def analyze_and_save_results(s3_bucket_name, prefix):
     df.to_csv(csv_buffer, index=False)
     s3_client.put_object(Bucket=s3_bucket_name, Key=output_csv_key, Body=csv_buffer.getvalue(), ContentType="text/csv")
 
-    print(f"✅ CSV successfully saved to s3://{s3_bucket_name}/{output_csv_key}")
+    print(f"CSV successfully saved to s3://{s3_bucket_name}/{output_csv_key}")
     
     dataset_path = f"s3://{s3_bucket_name}/{prefix}"
     output_dir = "output"
-    brand_limit = None  # or a value like 5 if you want to limit
+    brand_limit = None
     
     print("Calling OCR Model")
-    # Call the easy_ocr main method
     easy_ocr_main( dataset_path,output_dir,aws_access_key=AWS_ACCESS_KEY, aws_secret_key=AWS_SECRET_KEY,aws_session_token=aws_session_token )
     print("OCR Model just finished")
    
