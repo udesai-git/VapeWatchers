@@ -16,50 +16,6 @@ import textstat
 import emoji
 
 
-# df = pd.read_csv('vape_ocr_results1.csv')
-
-# print(df)
-
-# # Count duplicates in image_name
-# image_name_duplicates = df['image_name'].duplicated().sum()
-# print(f"Number of duplicate image_name entries: {image_name_duplicates}")
-
-# # Count how many image_name values appear more than once
-# duplicate_image_names = df['image_name'].value_counts()
-# duplicate_image_names = duplicate_image_names[duplicate_image_names > 1]
-# print(f"Number of image_name values that have duplicates: {len(duplicate_image_names)}")
-# print(f"Total duplicate instances: {duplicate_image_names.sum() - len(duplicate_image_names)}")
-
-# # Count duplicates in the combination (image_name, brand)
-# image_brand_duplicates = df.duplicated(subset=['image_name', 'brand']).sum()
-# print(f"Number of duplicate (image_name, brand) entries: {image_brand_duplicates}")
-
-# # Count how many (image_name, brand) combinations appear more than once
-# duplicate_image_brands = df.groupby(['image_name', 'brand']).size()
-# duplicate_image_brands = duplicate_image_brands[duplicate_image_brands > 1]
-# print(f"Number of (image_name, brand) combinations that have duplicates: {len(duplicate_image_brands)}")
-# print(f"Total duplicate instances: {duplicate_image_brands.sum() - len(duplicate_image_brands)}")
-
-# # Show the duplicate image_name entries
-# duplicate_images = df[df.duplicated(subset=['image_name'], keep=False)].sort_values('image_name')
-# print(duplicate_images)
-
-# # Show the duplicate (image_name, brand) entries
-# duplicate_image_brands = df[df.duplicated(subset=['image_name', 'brand'], keep=False)].sort_values(['image_name', 'brand'])
-# print(duplicate_image_brands)
-
-# #Remove duplicates based on the combination of (image_name, brand)
-# df_no_image_brand_duplicates = df.drop_duplicates(subset=['image_name', 'brand'], keep='first')
-
-# # Original DataFrame size
-# print(f"Original DataFrame: {len(df)} rows")
-
-# # After removing (image_name, brand) duplicates
-# print(f"After removing (image_name, brand) duplicates: {len(df_no_image_brand_duplicates)} rows")
-
-# df_no_image_brand_duplicates.to_csv('vape_ocr_results1.csv', index=False)
-
-
 def tokenize_and_preprocess(df):
     """
     Tokenize the extracted text from OCR and add as a new column.
@@ -84,9 +40,6 @@ def tokenize_and_preprocess(df):
         # Remove punctuation and non-alphabetic tokens
         tokens = [token for token in tokens if token.isalpha()]
 
-        # Optional: Remove stopwords (commented out as you might want to keep some for youth language analysis)
-        # stop_words = set(stopwords.words('english'))
-        # tokens = [token for token in tokens if token not in stop_words]
 
         return tokens
 
@@ -694,4 +647,3 @@ def main(s3_client):
     csv_buffer = io.StringIO()
     ocr_df.to_csv(csv_buffer, index=False)
     s3_client.put_object(Bucket=bucket_name, Key='vape_ocr_text_analysis.csv', Body=csv_buffer.getvalue(), ContentType="text/csv")
-

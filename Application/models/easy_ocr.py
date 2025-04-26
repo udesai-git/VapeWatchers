@@ -86,67 +86,6 @@ def check_gpu():
 
 
 class EasyVapeImageOCR:
-    # def __init__(self, dataset_path, output_dir="output", num_threads=4,
-    #              resize_factor=None, log_level=logging.INFO):
-    #     """
-    #     Initialize the OCR processor with EasyOCR and CUDA acceleration
-
-    #     Args:
-    #         dataset_path: Path to the dataset directory containing brand folders
-    #         output_dir: Directory to save results
-    #         num_threads: Number of threads for parallel processing
-    #         resize_factor: Optional factor to resize images (e.g., 0.5 for half size)
-    #         log_level: Logging level (default: INFO)
-    #     """
-    #     self.dataset_path = dataset_path
-    #     self.output_dir = Path(output_dir)
-    #     self.output_dir.mkdir(exist_ok=True)
-
-    #     # Configure logging
-    #     self.logger = logger
-    #     self.logger.setLevel(log_level)
-
-    #     # Force GPU usage for EasyOCR
-    #     self.use_cuda, self.gpu_memory_gb = check_gpu()
-    #     if not self.use_cuda:
-    #         raise RuntimeError("CUDA GPU is required but not available")
-
-    #     self.num_threads = num_threads
-    #     self.resize_factor = resize_factor
-
-    #     # Initialize EasyOCR reader with forced GPU usage
-    #     self.logger.info("Initializing EasyOCR reader with GPU acceleration...")
-    #     try:
-    #         self.reader = easyocr.Reader(['en'], gpu=True,
-    #                                      quantize=False,  # Disable quantization for better accuracy
-    #                                      cudnn_benchmark=True)  # Enable cuDNN benchmarking for speed
-    #         self.logger.info("EasyOCR initialized successfully with GPU")
-    #     except Exception as e:
-    #         self.logger.error(f"Error initializing EasyOCR: {e}")
-    #         raise
-
-    #     # Enhanced vape-related keywords for text correction/matching
-    #     self.vape_keywords = [
-    #         "vape", "vapor", "smoke", "smok", "juul", "puff", "pod", "nicotine",
-    #         "e-cigarette", "e-liquid", "e-juice", "check", "out", "these", "new",
-    #         "with", "me", "flavor", "cloud", "coil", "tank", "mod", "battery",
-    #         "charger", "disposable", "refill", "cartridge", "salt", "nic", "hit",
-    #         "device", "ml", "mg", "tobacco", "menthol", "fruity", "dessert", "vaper",
-    #         "ohm", "watt", "voltage", "mah", "rechargeable", "draw", "throat"
-    #     ]
-
-    #     # Check if dataset path is an S3 path
-    #     if self.dataset_path.startswith("s3://"):
-    #         self.s3_client = boto3.client('s3')
-    #         self.bucket_name, self.prefix = self.extract_bucket_and_prefix(self.dataset_path)
-    #         if not self.check_s3_path_exists(self.s3_client, self.dataset_path):
-    #             self.logger.error(f"ERROR: S3 path {self.dataset_path} does not exist.")
-    #             raise FileNotFoundError(f"S3 path {self.dataset_path} does not exist.")
-    #     else:
-    #         self.dataset_path = Path(self.dataset_path)
-
-    #     self.logger.info(f"CUDA acceleration: {'Enabled' if self.use_cuda else 'Disabled'}")
-    #     self.logger.info(f"Using {self.num_threads} threads for parallel processing")
     
     def __init__(self, dataset_path,s3_client, output_dir="output", num_threads=4,
                 resize_factor=None, log_level=logging.INFO, require_cuda=False):
@@ -442,7 +381,7 @@ class EasyVapeImageOCR:
         key_name = "vape_ocr_results.csv"
 
         s3_client.put_object(Bucket=bucket_name, Key=key_name, Body=csv_buffer.getvalue(), ContentType="text/csv")
-        print(f"✅ OCR results saved to s3://{bucket_name}/{key_name}")
+        print(f"    OCR results saved to s3://{bucket_name}/{key_name}")
         
         # Count duplicates in image_name
         image_name_duplicates = results_df['image_name'].duplicated().sum()
@@ -512,37 +451,6 @@ class EasyVapeImageOCR:
             img_name = os.path.basename(img_path)
             self.logger.error(f"Error in wrapper for {img_name}: {e}")
             return None
-
-
-    # def process_single_image_wrapper(self,img_path, brand_name,aws_access_key=None,aws_secret_key=None,aws_session_token=None):
-    #     try:
-    #         print(img_path)
-    #         img_name = os.path.basename(img_path)
-    #         if img_path.startswith("s3://") or not os.path.exists(str(img_path)):
-    #             # Handle S3
-    #             s3_bucket, s3_key = self.get_s3_bucket_and_key(img_path)
-    #             img = load_image_from_s3(s3_bucket, s3_key,aws_access_key=aws_access_key,aws_secret_key=aws_secret_key,aws_session_token=aws_session_token)
-    #         else:
-    #             # Handle local image
-    #             img = cv2.imread(str(img_path))
-
-
-    #         if img is None:
-    #             self.logger.error(f"Error: Could not read image {img_name}")
-    #             return None
-
-    #         # Apply resizing if specified
-    #         if self.resize_factor and self.resize_factor != 1.0:
-    #             h, w = img.shape[:2]
-    #             img = cv2.resize(img, (int(w * self.resize_factor), int(h * self.resize_factor)))
-
-    #         # Process the image
-    #         text, best_method = self.process_single_image(img_name, img)
-    #         return img_name, brand_name, text, best_method
-    #     except Exception as e:
-    #         img_name = os.path.basename(img_path)
-    #         self.logger.error(f"Error in wrapper for {img_name}: {e}")
-    #         return None
 
 
     def process_single_image(self, filename, img):
@@ -1020,7 +928,7 @@ def main(dataset_path, output_dir="output",*,
     s3_client = s3_session.client('s3')
 
     bucket_name = 'vapewatchers-2025'
-    prefix = 'MarketingImages'
+    prefix = 'MarketingImagesTest'
     
     """Main function to run the OCR pipeline"""
     # First, check if the dataset path exists
