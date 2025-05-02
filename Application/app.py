@@ -1,12 +1,17 @@
-from flask import Flask, render_template, jsonify, send_file, request, send_from_directory
+from models.brand_specific_EDA import generate_brand_specific_EDA
+from flask import Flask, render_template, jsonify, send_file, request, send_from_directory, redirect, url_for
 import os
 import subprocess
 import pandas as pd
-from models.image_processing import analyze_and_save_results
+from models.image_processing import analyze_and_save_results_generate_labels, analyze_and_save_results_model_labels
 from models.HistGradientBoostingClassifier import main as classifier_main
 from flask import request, render_template
 from models.capstone_EDA_csv_script import main as EDA_main
 import subprocess
+from models.config import AWS_ACCESS_KEY,AWS_SECRET_KEY,aws_session_token
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 
 import boto3
 import subprocess
@@ -14,11 +19,6 @@ import uuid
 from io import BytesIO
 
 app = Flask(__name__)
-
-
-AWS_ACCESS_KEY="ASIARMWYWT5W4G62QMRW"
-AWS_SECRET_KEY="8w5emt1huSBPI0jZvKkrSeJNw7HAt6IUqpa6Y9SA"
-aws_session_token="IQoJb3JpZ2luX2VjEKX//////////wEaCXVzLXdlc3QtMiJGMEQCIH6fYeZ14g7dwA667SRa5BjnQCkV9HcgDKlxKqWhyviWAiATwEUcW8i/BSZq5wtKzRXnjykmMmgtAR8n3YYvt9L4dCqqAgg+EAEaDDA5NjAxNzQ4OTc3MyIM0aYJScB/NK0JTq90KocCsKBrGvhph8iiTtC/0q+NVdcWEjEF+lj9dm/3dy4oAggHLmFq27znUgynfdPn+jsC3ciqwcDJ8r7M0lQMPMurycSJFTGp5tVf2Z64ymopLazKjSEQv4G47pMq2YPWQg5fa5QG259RdYfG6GrFgaQSXyzSo1xz5IdbSvHI0Ru18iub+1tR6VRWVnxk/nHA+iUEi7/XTLCcnknPKqbXKsj3hwQ8vS9/1WJtYlOQuRNEXD6bUYDl+W99IVwJCXIbtPuxC+k6kyTN2bU2S/DeiiHHh/vpH+zWT/vwwd7bPDSdMFL9chmxcbuo/jc0SiSZCn9Zgb9sHB0HfHXGH2F8NTSbxqAT9t5HY24wh86xwAY6ngGATfjHS3KeYHORnf7Soh+bjrIUaCVxRyVznOsq6jzNZqwTxmwP4E9/zvnfzxDdrC0bOll8kHeCqzDpaPIKE0hW9LRmCFiKXyDUDLEjkkson9zN9exp2y6e3jBF4JST3PLijtTVC/NqtBuVvqyqyxsU4LvFcpWOINdgomPBVcZEnyBNTtO/EUKZIPYbZ8XVRMCHxJgjcdpCzh/oDC7m/w=="
 
 s3_session = boto3.Session(
     aws_access_key_id=AWS_ACCESS_KEY,
@@ -36,7 +36,7 @@ def home():
 def generate_csv():
     try:
         print("📝 Starting CSV generation...")
-        analyze_and_save_results(s3_bucket_name='vapewatchers-2025', prefix='MarketingImagesTest/')
+        analyze_and_save_results_generate_labels(s3_bucket_name='vapewatchers-2025', prefix='MarketingImages/')
         run_eda()
         
         print('Calling mthod to train the model again')
@@ -60,7 +60,7 @@ def serve_image(filename):
 
 def run_eda():
     # Run the EDA script
-    EDA_main(AWS_ACCESS_KEY,AWS_SECRET_KEY,aws_session_token)
+    EDA_main()
 
 @app.route("/dashboard")
 def dashboard():
@@ -90,13 +90,23 @@ def dashboard():
             for img in os.listdir(image_root)
             if os.path.isfile(os.path.join(image_root, img)) and img.endswith((".png", ".jpg", ".jpeg"))
         ]
+    message = None
+    message_file = 'static/dashboard_message.txt'
+    
+    if os.path.exists(message_file):
+        with open(message_file, "r") as f:
+            message = f.read()
+        # After reading once, delete the message file
+        os.remove(message_file)
 
     return render_template(
         "dashboard.html",
         images=images,
         brands=brand_folders,
-        selected_brand=selected_brand
+        selected_brand=selected_brand,
+        message = message
     )
+
 
 
 
@@ -122,7 +132,27 @@ def download_csv():
 
     except Exception as e:
         return f"Error: {str(e)}", 500
+    
+@app.route('/generate_new_csv')
+def generate_csv_updated_data():
+    try:
+        print("📝 Starting CSV generation...")
+        analyze_and_save_results_model_labels(s3_bucket_name='vapewatchers-2025', prefix='MarketingImages/', generate_labels=False)
+        generate_brand_specific_EDA() 
+        try:
+            with open("static/dashboard_message.txt", "r") as f:
+                message = f.read()
+        except FileNotFoundError:
+            message = "No analysis done yet."
+        message_class = "success"  # Add success class if no exception
+    except Exception as e:
+        print(f"Error generating CSV: {str(e)}")
+        message = f"Error generating CSV: {str(e)}"
+        message_class = "error"
 
+    print(f"Message: {message}")
+    return render_template("dashboard.html", message=message, message_class=message_class)   
+    
 
 @app.route('/scrape-data', methods=['POST'])
 def scrape_data():

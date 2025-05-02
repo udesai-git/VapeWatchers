@@ -362,7 +362,7 @@ def comprehensive_token_analysis(df):
         df['distinctive_term_score'] = 0
 
     # 10. Create Combined Youth Appeal Score with all 10 factors
-    # Weights can be adjusted based on what factors you find most predictive
+    # Weights can be adjusted based 
     weights = {
         'slang_ratio': 0.15,
         'flavor_ratio': 0.15,
@@ -625,9 +625,14 @@ def check_warning_presence(df):
     return df
 
 
-def main(s3_client):
+def main(s3_client,generate_labels):
+    print(f'generated_labe inside ocr_eda_main.... {generate_labels}')
     bucket_name = 'vapewatchers-2025'
-    key = 'vape_ocr_results.csv'
+    if generate_labels:
+        key = 'vape_ocr_results.csv'
+    else:
+        key = 'vape_ocr_results_new.csv'
+        
     response_vape_ocr_results = s3_client.get_object(Bucket=bucket_name, Key=key)
     df = pd.read_csv(io.BytesIO(response_vape_ocr_results['Body'].read()))
     
@@ -646,4 +651,8 @@ def main(s3_client):
     
     csv_buffer = io.StringIO()
     ocr_df.to_csv(csv_buffer, index=False)
-    s3_client.put_object(Bucket=bucket_name, Key='vape_ocr_text_analysis.csv', Body=csv_buffer.getvalue(), ContentType="text/csv")
+    if generate_labels:
+        s3_client.put_object(Bucket=bucket_name, Key='vape_ocr_text_analysis.csv', Body=csv_buffer.getvalue(), ContentType="text/csv")
+    else:
+        s3_client.put_object(Bucket=bucket_name, Key='vape_ocr_text_analysis_new.csv', Body=csv_buffer.getvalue(), ContentType="text/csv")
+    

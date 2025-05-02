@@ -17,9 +17,10 @@ from matplotlib.spines import Spine
 from matplotlib.transforms import Affine2D
 from matplotlib.patches import Patch
 import boto3   
+from models.config import AWS_ACCESS_KEY, AWS_SECRET_KEY, aws_session_token
 
     
-def main(AWS_ACCESS_KEY,AWS_SECRET_KEY,aws_session_token):
+def main():
     
     s3_session = boto3.Session(
         aws_access_key_id=AWS_ACCESS_KEY,
@@ -247,7 +248,7 @@ def main(AWS_ACCESS_KEY,AWS_SECRET_KEY,aws_session_token):
         categories = ['Youth Appeal', 'Reading Grade', 'Flesch Score (Inverted)',
                       'Flavor Words', 'Slang Words', 'ALL CAPS']
 
-        values = [avg_youth_appeal, avg_reading_grade, 1 - avg_flesch_score,  # Invert Flesch so higher means harder
+        values = [avg_youth_appeal, avg_reading_grade, 1 - avg_flesch_score,
                   avg_flavor_ratio, avg_slang_ratio, avg_all_caps]
 
         fig = go.Figure()

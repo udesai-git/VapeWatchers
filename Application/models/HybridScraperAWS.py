@@ -13,9 +13,10 @@ import scrapy
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 from concurrent.futures import ThreadPoolExecutor
+from config import AWS_ACCESS_KEY, AWS_SECRET_KEY,aws_session_token
 
 class HybridImageScraper:
-    def __init__(self, *, base_url, aws_access_key_id, aws_secret_access_key, aws_session_token, max_pages=50, max_threads=10):
+    def __init__(self, *, base_url, max_pages=50, max_threads=10):
         self.base_url = base_url
         self.max_pages = max_pages
         self.max_threads = max_threads
@@ -24,11 +25,11 @@ class HybridImageScraper:
 
         # AWS S3 settings
         self.bucket_name = 'vapewatchers-2025'
-        self.s3_prefix = f"MarketingImagesTest/{self.website_name}/"
+        self.s3_prefix = f"MarketingImages/{self.website_name}/"
 
         s3_session = boto3.Session(
-            aws_access_key_id=aws_access_key_id,
-            aws_secret_access_key=aws_secret_access_key,
+            aws_access_key_id=AWS_ACCESS_KEY,
+            aws_secret_access_key=AWS_SECRET_KEY,
             aws_session_token=aws_session_token
         )
         self.s3_client = s3_session.client('s3')
@@ -183,10 +184,10 @@ class HybridImageScraper:
                 buffer.seek(0)
 
                 self.s3_client.upload_fileobj(buffer, self.bucket_name, s3_key, ExtraArgs={'ContentType': 'image/jpeg'})
-                print(f"✅ Uploaded to S3: {s3_key}")
+                print(f"Uploaded to S3: {s3_key}")
                 return True
         except Exception as e:
-            print(f"❌ Error uploading {img_url} to S3: {e}")
+            print(f"Error uploading {img_url} to S3: {e}")
             return False
 
     def download_all_images(self):
@@ -205,20 +206,11 @@ class HybridImageScraper:
         else:
             print("No images found to upload.")
 
-# def scraper_main(target_url,aws_access_key_id,aws_secret_access_key,aws_session_token, max_pages=50):
-#     scraper = HybridImageScraper(target_url,aws_access_key_id,aws_secret_access_key,aws_session_token,max_pages)
-#     scraper.run()
+
     
-# def scraper_main(target_url, aws_access_key_id, aws_secret_access_key, aws_session_token, max_pages=50):
-    
-def scraper_main(*, target_url, aws_access_key_id, aws_secret_access_key, aws_session_token, max_pages=50):
-    print("Key type:", type(aws_access_key_id))
-    print("Secret type:", type(aws_secret_access_key))
+def scraper_main(*, target_url, max_pages=50):
     scraper = HybridImageScraper(
         base_url=target_url,
-        aws_access_key_id=aws_access_key_id,
-        aws_secret_access_key=aws_secret_access_key,
-        aws_session_token=aws_session_token,
         max_pages=max_pages
     )
     scraper.run()
@@ -236,8 +228,5 @@ if __name__ == "__main__":
 
     scraper_main(
         target_url=target_url,
-        aws_access_key_id=aws_access_key,
-        aws_secret_access_key=aws_secret_key,
-        aws_session_token=aws_token,
         max_pages=max_pages
     )
