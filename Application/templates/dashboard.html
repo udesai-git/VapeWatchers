@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row" style="min-height: 90vh;">
+
+        <!-- Sidebar -->
+        <div class="col-md-3 bg-light p-4 shadow-sm">
+            <h4 class="mb-4 text-dark">User Controls</h4>
+
+            <!-- URL Input -->
+            <form method="POST" action="{{ url_for('scrape_data') }}">
+                <div class="mb-3">
+                    <input type="text" name="url_input" class="form-control" placeholder="Enter website URL" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100 mb-2">Scrape Data</button>
+            </form>
+
+            <!-- Refresh Button -->
+            <form method="GET" action="{{ url_for('generate_csv_updated_data') }}" onsubmit="showLoading()">
+                <button type="submit" class="btn btn-primary w-100 mb-2">Refresh Results</button>
+            </form>
+
+            <form method="GET" action="{{ url_for('generate_csv')}}" onsubmit="showLoading()">
+                <button type="submit" class="btn btn-primary w-100 mb-2">Retrain Model</button>
+            </form>
+
+            <!-- Dropdown to select brand -->
+            <form method="GET" action="{{ url_for('dashboard') }}">
+                <div class="mb-3">
+                    <label for="brandSelect" class="form-label text-dark">Select Brand:</label>
+                    <select class="form-select" id="brandSelect" name="brand" onchange="this.form.submit()">
+                        <option value="">-- All Dashboard Charts --</option>
+                        {% for brand in brands %}
+                            <option value="{{ brand }}" {% if brand == selected_brand %}selected{% endif %}>
+                                {{ brand }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </form>
+
+            <!-- Loading message -->
+            <div id="loadingMessage" style="display: none;" class="text-center mt-2 text-info">
+                <strong>Refreshing Results... Please wait.</strong>
+            </div>
+
+            <!-- Script to show loading -->
+            <script>
+                function showLoading() {
+                    document.getElementById('loadingMessage').style.display = 'block';
+                }
+            </script>
+
+            <!-- Download button -->
+            <a href="{{ url_for('download_csv') }}" class="btn btn-secondary w-100">Download Data</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 p-4">
+            <h3 class="mb-4 text-dark">Visualizations</h3>
+
+            <!-- Title based on selected brand -->
+            {% if selected_brand %}
+                <h5 class="text-primary mb-3">Charts for: {{ selected_brand }}</h5>
+            {% else %}
+                <h5 class="text-secondary mb-3">Overview Charts</h5>
+            {% endif %}
+
+            {% if images %}
+            <div id="chartCarousel" class="carousel slide mb-4 shadow-sm" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    {% for image in images %}
+                    <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+                        <img src="{{ url_for('static', filename=image) }}"
+                            class="d-block mx-auto carousel-img rounded"
+                            alt="Chart">
+                    </div>
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#chartCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#chartCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+            {% else %}
+            <p class="text-muted">No charts available yet.</p>
+            {% endif %}
+
+            {% if message %}
+                <div class="card mt-4 {{ message_class }}">
+                    <div class="card-body">
+                        <h5 class="card-title">Summary</h5>
+                        <p class="card-text">{{ message }}</p>
+                    </div>
+                </div>
+            {% endif %}
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}

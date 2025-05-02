@@ -13,6 +13,13 @@ from io import BytesIO
 from models.easy_ocr import main as easy_ocr_main
 from models.ocr_csv_eda import main as ocr_analysis_main
 import requests
+import joblib
+from models.HistGradientBoostingClassifier import data_pre_processing
+from models.config import AWS_ACCESS_KEY, AWS_SECRET_KEY, aws_session_token
+import time
+from scipy.spatial import distance
+
+
 
 
 # Load models
@@ -35,13 +42,8 @@ cartoon_model = YOLO(cartoon_model_path)
 vape_model = YOLO(vape_model_path)
 
 
-print("🔄 Starting image processing...")
+print("Starting image processing...")
 data = []
-
-
-AWS_ACCESS_KEY="ASIARMWYWT5W4G62QMRW"
-AWS_SECRET_KEY="8w5emt1huSBPI0jZvKkrSeJNw7HAt6IUqpa6Y9SA"
-aws_session_token="IQoJb3JpZ2luX2VjEKX//////////wEaCXVzLXdlc3QtMiJGMEQCIH6fYeZ14g7dwA667SRa5BjnQCkV9HcgDKlxKqWhyviWAiATwEUcW8i/BSZq5wtKzRXnjykmMmgtAR8n3YYvt9L4dCqqAgg+EAEaDDA5NjAxNzQ4OTc3MyIM0aYJScB/NK0JTq90KocCsKBrGvhph8iiTtC/0q+NVdcWEjEF+lj9dm/3dy4oAggHLmFq27znUgynfdPn+jsC3ciqwcDJ8r7M0lQMPMurycSJFTGp5tVf2Z64ymopLazKjSEQv4G47pMq2YPWQg5fa5QG259RdYfG6GrFgaQSXyzSo1xz5IdbSvHI0Ru18iub+1tR6VRWVnxk/nHA+iUEi7/XTLCcnknPKqbXKsj3hwQ8vS9/1WJtYlOQuRNEXD6bUYDl+W99IVwJCXIbtPuxC+k6kyTN2bU2S/DeiiHHh/vpH+zWT/vwwd7bPDSdMFL9chmxcbuo/jc0SiSZCn9Zgb9sHB0HfHXGH2F8NTSbxqAT9t5HY24wh86xwAY6ngGATfjHS3KeYHORnf7Soh+bjrIUaCVxRyVznOsq6jzNZqwTxmwP4E9/zvnfzxDdrC0bOll8kHeCqzDpaPIKE0hW9LRmCFiKXyDUDLEjkkson9zN9exp2y6e3jBF4JST3PLijtTVC/NqtBuVvqyqyxsU4LvFcpWOINdgomPBVcZEnyBNTtO/EUKZIPYbZ8XVRMCHxJgjcdpCzh/oDC7m/w=="
 
 
 s3_session = boto3.Session(
@@ -53,9 +55,8 @@ s3_session = boto3.Session(
 s3_client = s3_session.client('s3')
 
 bucket_name = 'vapewatchers-2025'
-prefix = 'MarketingImagesTest/'
+prefix = 'MarketingImages/'
 
-from scipy.spatial import distance
 
 # Named tuple for brightness levels
 BLevel = namedtuple("BLevel", ['brange', 'bval'])
@@ -73,7 +74,7 @@ _blevels = [
     BLevel(brange=range(231, 256), bval=10),
 ]
 
-from scipy.spatial import distance
+
 
 
 COLORS = {
@@ -206,8 +207,8 @@ def get_img_avg_brightness(image_input):
 
 def get_company_name(image_path):
     path_parts = image_path.split('/')
-    if "MarketingImagesTest" in path_parts:
-        idx = path_parts.index("MarketingImagesTest")
+    if "MarketingImages" in path_parts:
+        idx = path_parts.index("MarketingImages")
         if idx + 1 < len(path_parts):
             return path_parts[idx + 1]
     return "Unknown"
@@ -278,74 +279,122 @@ def label_data(row):
 
     return 1 if score >= 2 else 0
 
+def get_flagged_percentage(combined_df):
+    print('inside flagging calculation')
+    total_rows = len(combined_df)
+    ones_count = (combined_df['Label'] == 1).sum()
+    ones_percentage = (ones_count / total_rows) * 100
+    return ones_percentage
 
-    
-def analyze_and_save_results(s3_bucket_name, prefix):
-    print(f"📂 Accessing S3 bucket: {s3_bucket_name} with prefix: {prefix}")
+def generate_df(s3_bucket_name, prefix, generate_labels):
+    print(f'generated_labe inside generate_df.... {generate_labels}')
+    print(f"Accessing S3 bucket: {s3_bucket_name} with prefix: {prefix}")
     
     data = []
     continuation_token = None
+    
+    # Step 1: List all brand folders
+    response = s3_client.list_objects_v2(Bucket=s3_bucket_name, Prefix=prefix, Delimiter='/')
+    
+    if "CommonPrefixes" not in response:
+        print(f"   No folders found under prefix: {prefix}")
+        return pd.DataFrame(data)
 
-    while True:
-        list_kwargs = {'Bucket': s3_bucket_name, 'Prefix': prefix}
-        if continuation_token:
-            list_kwargs['ContinuationToken'] = continuation_token
+    brand_folders = [cp['Prefix'] for cp in response['CommonPrefixes']]
 
-        response = s3_client.list_objects_v2(**list_kwargs)
-        if "Contents" not in response:
-            print(f"   No files found in {prefix} on bucket {s3_bucket_name}")
-            break
+    if not brand_folders:
+        print(f"   No brand folders available under prefix: {prefix}")
+        return pd.DataFrame(data)
 
-        for obj in response["Contents"]:
-            image_path = obj["Key"]
-            if not image_path.lower().endswith((".png", ".jpg", ".jpeg")):
-                continue  # Skip non-image files
+    # Now fetch the LastModified timestamp for each brand folder
+    brand_folder_times = []
+    for brand_prefix in brand_folders:
+        folder_objects = s3_client.list_objects_v2(Bucket=s3_bucket_name, Prefix=brand_prefix)
+        if "Contents" in folder_objects and folder_objects["Contents"]:
+            # Pick the earliest object's LastModified as folder time
+            folder_time = min(obj['LastModified'] for obj in folder_objects["Contents"])
+            brand_folder_times.append((brand_prefix, folder_time))
 
-            print(f" Processing: {image_path}")
+    # Sort folders by last modified time (descending)
+    brand_folder_times.sort(key=lambda x: x[1], reverse=True)
 
-            try:
-                brand_name = image_path.split("/")[1]
-                image_name = image_path.split("/")[-1]
+    if not generate_labels:
+        # Only process the most recently modified brand folder
+        brand_folders = [brand_folder_times[0][0]]
+    else:
+        # Otherwise process all
+        brand_folders = [b[0] for b in brand_folder_times]
 
-                img_data = s3_client.get_object(Bucket=s3_bucket_name, Key=image_path)["Body"].read()
-                image_array = np.asarray(bytearray(img_data), dtype=np.uint8)
-                img = cv2.imdecode(image_array, cv2.IMREAD_COLOR)
-                if img is None:
-                    print(f"Error loading image: {image_path}")
+    print(f"Folders to process: {brand_folders}")
+
+    # Step 2: Loop over each brand folder
+    for brand_prefix in brand_folders:
+        continuation_token = None
+        
+        while True:
+            list_kwargs = {'Bucket': s3_bucket_name, 'Prefix': brand_prefix}
+            if continuation_token:
+                list_kwargs['ContinuationToken'] = continuation_token
+
+            response = s3_client.list_objects_v2(**list_kwargs)
+            if "Contents" not in response:
+                print(f"   No images found in {brand_prefix}")
+                break
+
+            for obj in response["Contents"]:
+                image_path = obj["Key"]
+                if not image_path.lower().endswith((".png", ".jpg", ".jpeg")):
+                    continue  # Skip non-image files
+
+                print(f" Processing: {image_path}")
+
+                try:
+                    brand_name = image_path.split("/")[1]
+                    image_name = image_path.split("/")[-1]
+
+                    img_data = s3_client.get_object(Bucket=s3_bucket_name, Key=image_path)["Body"].read()
+                    image_array = np.asarray(bytearray(img_data), dtype=np.uint8)
+                    img = cv2.imdecode(image_array, cv2.IMREAD_COLOR)
+                    if img is None:
+                        print(f"Error loading image: {image_path}")
+                        continue
+
+                    age_results = detect_age_with_mtcnn(img)
+                    face_detected = len(age_results) > 0
+                    detected_age = age_results[0][4] if face_detected else "N/A"
+                    cartoon_detected = detect_cartoon_objects(img)
+                    vape_type = detect_vape_type(img)
+                    brightness_value = get_img_avg_brightness(img)
+                    brightness_level = detect_level(brightness_value)
+                    colors = extract_Dominant_COLOR(img, top_n=3)
+
+                    data.append({
+                        "image_name": image_name,
+                        "Brand": brand_name,
+                        "Face": "Yes" if face_detected else "No",
+                        "Age": detected_age,
+                        "Cartoon": "Yes" if cartoon_detected else "No",
+                        "Vape_Type": vape_type,
+                        "Brightness_Level": brightness_level,
+                        "Dominant_COLOR": colors
+                    })
+
+                except Exception as e:
+                    print(f"Error processing {image_path}: {e}")
                     continue
 
-                age_results = detect_age_with_mtcnn(img)
-                face_detected = len(age_results) > 0
-                detected_age = age_results[0][4] if face_detected else "N/A"
-                cartoon_detected = detect_cartoon_objects(img)
-                vape_type = detect_vape_type(img)
-                brightness_value = get_img_avg_brightness(img)
-                brightness_level = detect_level(brightness_value)
-                colors = extract_Dominant_COLOR(img, top_n=3)
+            if response.get("IsTruncated"):
+                continuation_token = response.get("NextContinuationToken")
+            else:
+                break
 
-                data.append({
-                    "image_name": image_name,
-                    "Brand": brand_name,
-                    "Face": "Yes" if face_detected else "No",
-                    "Age": detected_age,
-                    "Cartoon": "Yes" if cartoon_detected else "No",
-                    "Vape_Type": vape_type,
-                    "Brightness_Level": brightness_level,
-                    "Dominant_COLOR": colors
-                })
+    return pd.DataFrame(data)
 
-            except Exception as e:
-                print(f"Error processing {image_path}: {e}")
-                continue
-
-        # Check if there are more objects to list
-        if response.get("IsTruncated"):  # More results available
-            continuation_token = response.get("NextContinuationToken")
-        else:
-            break
-
+    
+def analyze_and_save_results_generate_labels(s3_bucket_name, prefix):
+   
     # Save results to S3
-    df = pd.DataFrame(data)
+    df = generate_df(bucket_name,prefix,generate_labels=True)
 
     output_csv_key = "marketing_image_processed.csv"
     csv_buffer = BytesIO()
@@ -363,7 +412,7 @@ def analyze_and_save_results(s3_bucket_name, prefix):
     print("OCR Model just finished")
    
     print("calling text analysis on ocr extracted text")
-    ocr_analysis_main(s3_client)
+    ocr_analysis_main(s3_client,generate_labels=True)
     print("finished text analysis on ocr extracted text")
     
      
@@ -380,3 +429,67 @@ def analyze_and_save_results(s3_bucket_name, prefix):
     csv_buffer = io.StringIO()
     combined_df.to_csv(csv_buffer, index=False)
     s3_client.put_object(Bucket=s3_bucket_name, Key='combined_dataset.csv', Body=csv_buffer.getvalue(), ContentType="text/csv")
+     
+def analyze_and_save_results_model_labels(s3_bucket_name, prefix,generate_labels):
+    print(f'generated_labe inside analyze.... {generate_labels}')
+    # Save results to S3
+    df = generate_df(s3_bucket_name,prefix,generate_labels)   
+    output_csv_key = "marketing_image_processed_new_dataset.csv"
+    csv_buffer = BytesIO()
+    df.to_csv(csv_buffer, index=False)
+    s3_client.put_object(Bucket=s3_bucket_name, Key=output_csv_key, Body=csv_buffer.getvalue(), ContentType="text/csv")
+    print(f"CSV successfully saved to s3://{s3_bucket_name}/{output_csv_key}")
+    
+    dataset_path = f"s3://{s3_bucket_name}/{prefix}"
+    output_dir = "output"
+    brand_limit = None
+    
+    print("Calling OCR Model")
+    easy_ocr_main( dataset_path,generate_labels,output_dir)
+    print("OCR Model just finished")
+   
+    print("calling text analysis on ocr extracted text")
+    ocr_analysis_main(s3_client,generate_labels)
+    print("finished text analysis on ocr extracted text")
+    
+    key_image_models = output_csv_key
+    key_ocr_model = 'vape_ocr_text_analysis_new.csv'
+    
+    response_image_models = s3_client.get_object(Bucket=s3_bucket_name, Key=key_image_models)
+    image_model_csv = pd.read_csv(BytesIO(response_image_models['Body'].read()))
+    response_ocr_model = s3_client.get_object(Bucket=s3_bucket_name, Key=key_ocr_model)
+    ocr_model_csv = pd.read_csv(BytesIO(response_ocr_model['Body'].read()))
+    
+    combined_df = pd.merge(image_model_csv, ocr_model_csv, on='image_name', how='outer')
+    
+    combined_df_processed = data_pre_processing(combined_df,generate_labels)
+    model = joblib.load("models/trained_model.pkl")
+    print('model loaded successfully')
+    
+    predictions = model.predict(combined_df_processed)
+    # Attach predictions to combined_df_processed
+    combined_df_processed["Label"] = predictions
+
+    # Merge predictions back into original combined_df
+    combined_df["Label"] = combined_df_processed["Label"].values
+    ones_percentage = get_flagged_percentage(combined_df)
+    
+
+    # Set the message
+    dashboard_message = ""
+
+    if ones_percentage > 20:
+        dashboard_message = f"Alert: {ones_percentage:.2f}% of samples are flagged by our model, indicating this brand targets youth!"
+        message_class = "alert-danger"  # Bootstrap class for red alert
+    else:
+        dashboard_message = f"Only {ones_percentage:.2f}% samples flagged by our model, indicating this brand follows all guidelines!"
+        message_class = "alert-success"  # Bootstrap class for green success
+
+            # Save the dashboard message into a text file
+    with open("static/dashboard_message.txt", "w") as f:
+        f.write(dashboard_message)
+    
+    csv_buffer = io.BytesIO()
+    combined_df.to_csv(csv_buffer, index=False)
+    csv_buffer.seek(0)
+    s3_client.put_object(Bucket=s3_bucket_name, Key='combined_dataset_new.csv', Body=csv_buffer.getvalue(), ContentType="text/csv")

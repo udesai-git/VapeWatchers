@@ -12,7 +12,6 @@ import torch
 import easyocr
 import time
 import re
-# Removed matplotlib import as we no longer need visualizations
 from pathlib import Path
 import pandas as pd
 from concurrent.futures import ThreadPoolExecutor
@@ -24,13 +23,15 @@ import boto3
 from PIL import Image
 from botocore.exceptions import ClientError
 from IPython import get_ipython
+from models.config import AWS_ACCESS_KEY, AWS_SECRET_KEY, aws_session_token
 
 
-def load_image_from_s3(s3_bucket, s3_key, *, aws_access_key=None, aws_secret_key=None, aws_session_token=None):
+
+def load_image_from_s3(s3_bucket, s3_key):
 
     s3_session = boto3.Session(
-        aws_access_key_id=aws_access_key,
-        aws_secret_access_key=aws_secret_key,
+        aws_access_key_id=AWS_ACCESS_KEY,
+        aws_secret_access_key=AWS_SECRET_KEY,
         aws_session_token=aws_session_token,
         region_name='us-east-1' 
         )
@@ -101,8 +102,14 @@ class EasyVapeImageOCR:
             require_cuda: If True, raises an error if CUDA is not available
         """
         self.dataset_path = dataset_path
+        if not output_dir:
+            output_dir = "./outputs"  # default fallback
         self.output_dir = Path(output_dir)
-        self.output_dir.mkdir(exist_ok=True)
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+
+        # self.output_dir = Path("./outputs")
+        # self.output_dir.mkdir(parents=True, exist_ok=True)
+
 
         # Configure logging
         self.logger = logger
@@ -196,7 +203,7 @@ class EasyVapeImageOCR:
 
         return brand_folders
 
-    def process_dataset(self,aws_access_key=None,aws_secret_key=None,aws_session_token=None, brand_limit=None, batch_size=10, save_intermediate=True):
+    def process_dataset(self,generate_labels:bool , brand_limit=None, batch_size=10, save_intermediate=True):
         """
         Process all images in all brand folders with parallel execution
 
@@ -208,13 +215,39 @@ class EasyVapeImageOCR:
         Returns:
             DataFrame with results, processing time, and total image count
         """
+        print(f'generated_labe inside process_dataset.... {generate_labels}')
         # Get all brand folders (now from S3)
         brand_folders = self.get_brand_folders()
+        
+        if not generate_labels and brand_folders:
+            self.logger.info(f"Selecting latest modified brand folder because generate_labels is False...")
+        # Sort folders by last modified time
+        folder_times = []
+        for folder in brand_folders:
+            # List objects under each brand folder
+            response = self.s3_client.list_objects_v2(
+                Bucket=self.bucket_name,
+                Prefix=folder,
+                MaxKeys=1
+            )
+            if 'Contents' in response and response['Contents']:
+                folder_time = response['Contents'][0]['LastModified']
+                folder_times.append((folder, folder_time))
+
+        if folder_times:
+            # Sort by last modified descending
+            folder_times.sort(key=lambda x: x[1], reverse=True)
+            latest_folder = folder_times[0][0]
+            brand_folders = [latest_folder]
+            self.logger.info(f"Selected latest brand folder: {Path(latest_folder).name}")
+        else:
+            self.logger.warning(f"No contents found to determine latest folder.")
+
+        # Handle brand_limit if passed
         if brand_limit and brand_limit < len(brand_folders):
             self.logger.info(f"Limiting processing to {brand_limit} brands out of {len(brand_folders)}")
             brand_folders = brand_folders[:brand_limit]
 
-        # self.logger.info(f"Found {len(brand_folders)} brand folders: {[folder.name for folder in brand_folders]}")
         self.logger.info(f"Found {len(brand_folders)} brand folders: {[Path(folder).name for folder in brand_folders]}")
 
         start_time = time.time()
@@ -278,8 +311,7 @@ class EasyVapeImageOCR:
 
                     # Submit batch for processing
                     future_to_img = {
-                        executor.submit(self.process_single_image_wrapper, img_key, brand_name,
-                                        aws_access_key, aws_secret_key, aws_session_token): img_key
+                        executor.submit(self.process_single_image_wrapper, img_key, brand_name): img_key
                         for img_key in batch
                     }
 
@@ -368,19 +400,26 @@ class EasyVapeImageOCR:
         
         csv_buffer = io.BytesIO()
         results_df.to_csv(csv_buffer, index=False)
+        csv_buffer.seek(0)
 
         s3_session = boto3.Session(
-        aws_access_key_id=aws_access_key,
-        aws_secret_access_key=aws_secret_key,
+        aws_access_key_id=AWS_ACCESS_KEY,
+        aws_secret_access_key=AWS_SECRET_KEY,
         aws_session_token=aws_session_token,
         region_name='us-east-1' 
         )
 
         s3_client = s3_session.client('s3')
         bucket_name = "vapewatchers-2025"
-        key_name = "vape_ocr_results.csv"
+        
+        
 
-        s3_client.put_object(Bucket=bucket_name, Key=key_name, Body=csv_buffer.getvalue(), ContentType="text/csv")
+        if generate_labels:
+            key_name = "vape_ocr_results.csv"
+            s3_client.put_object(Bucket=bucket_name, Key=key_name, Body=csv_buffer.getvalue(), ContentType="text/csv")
+        else:
+            key_name = "vape_ocr_results_new.csv"
+            s3_client.put_object(Bucket=bucket_name, Key=key_name, Body=csv_buffer.getvalue(), ContentType="text/csv")
         print(f"    OCR results saved to s3://{bucket_name}/{key_name}")
         
         # Count duplicates in image_name
@@ -418,7 +457,7 @@ class EasyVapeImageOCR:
         key = parts[1]
         return bucket, key
 
-    def process_single_image_wrapper(self, img_path, brand_name, aws_access_key=None, aws_secret_key=None, aws_session_token=None):
+    def process_single_image_wrapper(self, img_path, brand_name):
         try:
             print(f"Received image path: {img_path}")
             img_name = os.path.basename(img_path)
@@ -428,10 +467,7 @@ class EasyVapeImageOCR:
                 s3_uri = f"s3://{self.bucket_name}/{img_path}"  # Construct full S3 URI
                 s3_bucket, s3_key = self.get_s3_bucket_and_key(s3_uri)
                 img = load_image_from_s3(
-                    s3_bucket, s3_key,
-                    aws_access_key=aws_access_key,
-                    aws_secret_key=aws_secret_key,
-                    aws_session_token=aws_session_token
+                    s3_bucket, s3_key
                 )
             else:
                 img = cv2.imread(str(img_path))
@@ -837,11 +873,11 @@ def get_optimal_batch_size():
     else:
         return 16
 
-def s3_path_exists(s3_path,aws_access_key,aws_secret_key,aws_session_token):
+def s3_path_exists(s3_path,AWS_ACCESS_KEY,AWS_SECRET_KEY,aws_session_token):
     """Check if an S3 path exists."""
     s3_session = boto3.Session(
-        aws_access_key_id=aws_access_key,
-        aws_secret_access_key=aws_secret_key,
+        aws_access_key_id=AWS_ACCESS_KEY,
+        aws_secret_access_key=AWS_SECRET_KEY,
         aws_session_token=aws_session_token,
         region_name='us-east-1' 
     )
@@ -857,70 +893,11 @@ def s3_path_exists(s3_path,aws_access_key,aws_secret_key,aws_session_token):
         return False
 
 
-
-# def main(dataset_path, output_dir="output", brand_limit=None):
-#     """Main function to run the OCR pipeline"""
-#     # First, check if the dataset path exists
-#     if not os.path.exists(dataset_path):
-#         logger.error(f"ERROR: Dataset path {dataset_path} does not exist. Please update the path.")
-#         return
-
-#     # Determine optimal batch size based on GPU memory
-#     optimal_batch_size = get_optimal_batch_size()
-#     logger.info(f"Optimal batch size for your GPU: {optimal_batch_size}")
-
-#     # Create output directory
-#     os.makedirs(output_dir, exist_ok=True)
-
-#     # Initialize OCR with GPU settings
-#     ocr = EasyVapeImageOCR(
-#         dataset_path=dataset_path,
-#         output_dir=output_dir,
-#         num_threads=2,  # Using 2 threads works well with GPU
-#         resize_factor=None  # Set to 0.5 if you have memory issues
-#     )
-
-#     # Process the dataset
-#     results_df, processing_time, num_images = ocr.process_dataset(
-#         brand_limit=brand_limit,
-#         batch_size=optimal_batch_size,
-#         save_intermediate=True
-#     )
-
-#     # Display summary of results
-#     logger.info(f"\nProcessed {num_images} images in {processing_time:.2f} seconds")
-#     logger.info(f"Average time per image: {processing_time/max(num_images, 1):.2f} seconds")
-
-#     # Display DataFrame preview
-#     logger.info("\nResults preview:")
-#     if len(results_df) > 0:
-#         print(results_df.head())
-#     else:
-#         logger.warning("No results were obtained")
-
-#     # Show brand summary
-#     logger.info("\nResults by brand:")
-#     brand_counts = results_df.groupby('brand').size()
-#     print(brand_counts)
-
-#     # Basic text analysis
-#     if len(results_df) > 0:
-#         logger.info("\nText length statistics:")
-#         results_df['text_length'] = results_df['extracted_text'].str.len()
-#         print(results_df['text_length'].describe())
-
-#         # Count empty results
-#         empty_count = results_df[results_df['extracted_text'] == ''].shape[0]
-#         logger.info(f"Empty results: {empty_count} ({empty_count/len(results_df)*100:.1f}%)")
-
-#     logger.info("\nOCR processing complete.")
-#     return results_df
-def main(dataset_path, output_dir="output",*,
-         aws_access_key=None, aws_secret_key=None, aws_session_token=None):
+def main(dataset_path,generate_labels,output_dir="output"):
 
     s3_session = boto3.Session(
-        aws_access_key_id=aws_access_key,
-        aws_secret_access_key=aws_secret_key,
+        aws_access_key_id=AWS_ACCESS_KEY,
+        aws_secret_access_key=AWS_SECRET_KEY,
         aws_session_token=aws_session_token,
         region_name='us-east-1' 
     )
@@ -928,11 +905,11 @@ def main(dataset_path, output_dir="output",*,
     s3_client = s3_session.client('s3')
 
     bucket_name = 'vapewatchers-2025'
-    prefix = 'MarketingImagesTest'
+    prefix = 'MarketingImages'
     
     """Main function to run the OCR pipeline"""
     # First, check if the dataset path exists
-    if not s3_path_exists(dataset_path,aws_access_key,aws_secret_key,aws_session_token):
+    if not s3_path_exists(dataset_path,AWS_ACCESS_KEY,AWS_SECRET_KEY,aws_session_token):
         logger.error(f"ERROR: Dataset path {dataset_path} does not exist. Please update the path.")
         return
 
@@ -944,9 +921,9 @@ def main(dataset_path, output_dir="output",*,
     os.makedirs(output_dir, exist_ok=True)
 
     # Initialize OCR with GPU settings
-    # ocr = easyocr.Reader(['en'], gpu=True, quantize=False, cudnn_benchmark=True)
+
     logger.info("OCR initialized with GPU support.")
-    
+    print(f'generated_labe inside easy_ocr_main.... {generate_labels}')
     ocr = EasyVapeImageOCR(
         dataset_path=dataset_path,
         output_dir=output_dir,
@@ -955,14 +932,13 @@ def main(dataset_path, output_dir="output",*,
         s3_client=s3_client
     )
 
+    print(f'generated_labe inside easy_ocr_main.... {generate_labels}')
     # Process the dataset
     results_df, processing_time, num_images = ocr.process_dataset(
         brand_limit=10,
+        generate_labels=generate_labels,
         batch_size=optimal_batch_size,
-        save_intermediate=True,
-        aws_access_key=aws_access_key,
-        aws_secret_key=aws_secret_key,
-        aws_session_token=aws_session_token
+        save_intermediate=True
     )
 
 # Determine if we're running in a Jupyter environment
