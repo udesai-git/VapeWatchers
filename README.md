@@ -32,24 +32,16 @@ It integrates computer vision models (YOLO, MTCNN, AgeNet) into a **Flask web da
 
 
 📦 Output
-Flagged images with:
-
-Face and age estimation
-
-Vape detection
-
-Cartoon elements
-
-Chart visualizations for readability, brightness, etc.
-
-Downloadable CSV (optional)
+- Flagged images with:
+- Face and age estimation
+- Vape detection
+- Cartoon elements
+- Chart visualizations for readability, brightness, etc.
+- Downloadable CSV (optional)
 
 🧠 Models Used
-Face Detection: MTCNN
-
-Age Estimation: AgeNet (Caffe-based / CNN)
-
-Cartoon Detection: Custom-trained ResNet classifier
-
-Vape Product Detection: YOLOv5 custom model
+- Face Detection: MTCNN
+- Age Estimation: AgeNet (Caffe-based / CNN)
+- Cartoon Detection: Custom-trained ResNet classifier
+- Vape Product Detection: YOLOv5 custom model
 
