@@ -45,3 +45,33 @@ It integrates computer vision models (YOLO, MTCNN, AgeNet) into a **Flask web da
 - Cartoon Detection: Custom-trained ResNet classifier
 - Vape Product Detection: YOLOv5 custom model
 
+### Steps to Run This Project
+
+1. Clone the Repository
+```
+git clone https://github.com/MayankG514/VapeWatchers.git
+cd VapeWatchers
+```
+
+2. Set Up a Virtual Environment
+```
+python -m venv venv
+source venv/bin/activate   # For Windows: venv\Scripts\activate
+```
+
+3. Install the Required Dependencies
+```
+pip install -r requirements.txt
+```
+
+4. Add AWS Credentials (If Using S3)
+```
+Change config.py file with appropriate keys
+```
+
+5. Run the Flask Application
+```
+python app.py
+```
+
+
