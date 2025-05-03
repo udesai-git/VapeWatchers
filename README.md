@@ -23,7 +23,8 @@ It integrates computer vision models (YOLO, MTCNN, AgeNet) into a **Flask web da
 │ ├── age_classification.py
 │ ├── cartoon_detection.py
 │ └── vape_type_detection.py
-│ └── image_processing.py # Image analysis pipeline
+│ └── HistGradientBoostingClassifier.py
+│ └── image_processing.py 
 ├── static/
 │ └── visualization_images/ # Output images for dashboard
 ├── requirements.txt
