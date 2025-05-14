@@ -18,7 +18,7 @@ It integrates computer vision models (YOLO, MTCNN, AgeNet) into a **Flask web da
 ```
 ├── app.py # Main Flask app
 ├── dashboard.html # Web dashboard template
-├── models/
+├── image models/
 │ ├── face_detection.py
 │ ├── age_classification.py
 │ ├── cartoon_detection.py
